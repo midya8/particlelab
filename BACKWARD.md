@@ -46,7 +46,7 @@ Categorical bins are right-open. An exact CDF boundary skips to the following po
 
 Population variance divides by the number of draws. It is a sample summary, not an unbiased estimator of posterior variance. A single draw has variance 0, which is not certainty. Constant sampled states are returned with exactly zero variance rather than a rounding residual. Distinct sampled-index counts depend on draw count and weights; they are neither particle ESS nor the number of independent model-posterior samples.
 
-Time is O(T*N + draws*T*N), with retained filter memory O(T*N), returned paths O(draws*T) and O(N) temporary kernel storage. Larger draw counts reduce only simulation noise in this fixed finite approximation; they do not improve the retained filter populations.
+Time is `O(T*N + draws*T*N)`, with retained filter memory `O(T*N)`, returned paths `O(draws*T)` and `O(N)` temporary kernel storage. Larger draw counts reduce only simulation noise in this fixed finite approximation; they do not improve the retained filter populations.
 
 ## Same-filter development comparison
 
