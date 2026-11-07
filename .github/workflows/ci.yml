@@ -27,3 +27,5 @@ jobs:
       - run: python examples/render_smoothing.py /tmp/smoothing-audit.json --check
       - run: python examples/backward_audit.py > /tmp/backward-audit.json
       - run: python examples/render_backward.py /tmp/backward-audit.json --check
+      - run: python examples/proposal_audit.py > /tmp/proposal-audit.json
+      - run: python examples/render_proposal.py /tmp/proposal-audit.json --check
