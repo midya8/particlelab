@@ -108,18 +108,28 @@ python examples/smoothing_audit.py > /tmp/smoothing-audit.json
 python examples/render_smoothing.py /tmp/smoothing-audit.json --check
 ```
 
+## Optional backward simulation is not state-support recovery
+
+`backward` samples paths outside the recorded genealogy using filtering weights and Gaussian transition densities. It has a separate draw seed, returns every sampled index/state path and rejects process std below 1e-4 rather than inventing a density for deterministic transitions. Candidate work is capped at 2,097,152.
+
+On the unchanged 64-step fixture, 512 backward draws reach two initial indices instead of one retained path. Their time-0 variance is .022290238, still over twice the exact .009521314. More path diversity is not exact uncertainty: no new state values are created. [Algorithm, numerical guards, complete same-filter comparison and figure](BACKWARD.md).
+
+```sh
+python -m particlelab backward examples/sequence.json --particles 32 --draws 512 --draw-seed 0
+```
+
 ## Validation and bounds
 
-**74 tests** cover one-step hand weights/moments/evidence, no-resampling evidence against full products over the initial sample, recovery of relative log mass after probability underflow, exact resampling boundary/zero-bin/offspring audits, RNG isolation, parent/root mappings, state-diversity versus ancestry, closed-form Gaussian/static-sequence references, extreme precision, strict CLI payloads, both success/failure demo checks and all plotted coordinates/values/SD polygon vertices. Static-square symmetry/modes, direct log-joint density ratios, sign-mass traces, dense joint-Gaussian smoothing references, forward path-copy equivalence and all three SVGs are also checked. The expected-offspring test integrates a fixed rational-weight fixture over a systematic-offset grid; it is not a proof for all floats. CI runs Python 3.10..3.13 plus the demo and byte-identical SVG check.
+**92 tests** cover one-step hand weights/moments/evidence, no-resampling evidence against full products over the initial sample, recovery of relative log mass after probability underflow, exact resampling boundary/zero-bin/offspring audits, RNG isolation, parent/root mappings, state-diversity versus ancestry, closed-form Gaussian/static-sequence references, extreme precision, strict CLI payloads, both success/failure demo checks and all plotted coordinates/values/SD polygon vertices. Static-square symmetry/modes, direct log-joint density ratios, sign-mass traces, dense joint-Gaussian smoothing references, forward path-copy equivalence and the finite backward-kernel law and all four SVGs are also checked. The expected-offspring test integrates a fixed rational-weight fixture over a systematic-offset grid; it is not a proof for all floats. CI runs Python 3.10..3.13 plus the demo and byte-identical SVG check.
 
 Inputs: 1..80 finite observations in [-1e4,1e4]; a in [-1,1]; process std in [0,100]; observation/initial std in [1e-4,100]; initial mean in [-1e4,1e4]. Particles: integer 1..4096; `N*T <= 65536`. Seed: integer `0..2**32-1`. ESS fraction: [0,1]. Booleans are rejected as numbers. Full history uses `O(T*N)` time/output/memory, including `O(N)` systematic resampling, plus `O(T)` for the Kalman/RTS references. Retrospective reconstruction adds `O(T*N)` time/memory and returned full trajectories. The demo runs sixteen additional particle filters. All quantities use floating point and a finite local RNG. Tiny weights can underflow; finite logs survive only before resampling. Random draws are reproducible in the tested environment, not a cross-language bitstream contract.
 
-The square branch has an analytic static symmetry/mode reference and selected support-loss fixtures, not a dynamic nonlinear tracking benchmark. There is no backward-simulation smoothing, parameter learning, high-dimensional proposal, robustness claim, convergence certificate, anomaly test, real-world accuracy or coverage guarantee. No external service receives the local input.
+The square branch has an analytic static symmetry/mode reference and selected support-loss fixtures, not a dynamic nonlinear tracking benchmark. There is no parameter learning, high-dimensional proposal, robustness claim, convergence certificate, anomaly test, real-world accuracy or coverage guarantee. No external service receives the local input.
 
 ## Attribution
 
 Independent implementation inspired by Gordon, Salmond and Smith, **"Novel approach to nonlinear/non-Gaussian Bayesian state estimation" (1993)**, especially Section 3's transition propagation, likelihood weighting and bootstrap resampling. [Primary paper](https://people.bordeaux.inria.fr/pierre.delmoral/gordon-salmond-smith-1993.pdf). The paper also discusses loss of distinct samples. This project uses systematic/adaptive ESS resampling, scalar linear/square observation models and its own synthetic fixtures; it does **not** reproduce the paper's bearings-only experiments, roughening, prior editing or performance comparisons. No code or paper figures were copied.
 
-Standard retained-history SIR smoothing and scalar RTS references are independently implemented; [Särkkä and Svensson (2023), sections 12.2/15.1](https://users.aalto.fi/~ssarkka/pub/bfs_book_2023_online.pdf). No source text, code or figures copied.
+Standard retained-history SIR smoothing and scalar RTS references are independently implemented; [Särkkä and Svensson (2023), sections 12.2/15.1/15.2](https://users.aalto.fi/~ssarkka/pub/bfs_book_2023_online.pdf). No source text, code or figures copied.
 
 MIT license.
