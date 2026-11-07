@@ -1,0 +1,348 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="600" viewBox="0 0 1120 600" role="img" aria-labelledby="title desc">
+<title id="title">ParticleLab retained genealogies can lose early uncertainty</title>
+<desc id="desc">All twelve linear means, sixty-four smoothed variance points, and sixty-four lineage counts and weight ESS values. An early path collapses despite thirty-two distinct terminal states. Fixed development fixtures, not calibrated uncertainty.</desc>
+<metadata>{&quot;all_seed_errors&quot;: [{&quot;initial_lineages&quot;: 96, &quot;mean_rmse&quot;: 0.028698710677713016, &quot;seed&quot;: 0, &quot;variance_rmse&quot;: 0.01703289555529555}, {&quot;initial_lineages&quot;: 94, &quot;mean_rmse&quot;: 0.03806377679595992, &quot;seed&quot;: 1, &quot;variance_rmse&quot;: 0.005398068644916105}, {&quot;initial_lineages&quot;: 85, &quot;mean_rmse&quot;: 0.027736448159308275, &quot;seed&quot;: 2, &quot;variance_rmse&quot;: 0.016875559210437086}, {&quot;initial_lineages&quot;: 78, &quot;mean_rmse&quot;: 0.033742381831316996, &quot;seed&quot;: 3, &quot;variance_rmse&quot;: 0.014189406697050452}, {&quot;initial_lineages&quot;: 93, &quot;mean_rmse&quot;: 0.031082238036554986, &quot;seed&quot;: 4, &quot;variance_rmse&quot;: 0.01285739162807259}, {&quot;initial_lineages&quot;: 89, &quot;mean_rmse&quot;: 0.028386052166629195, &quot;seed&quot;: 5, &quot;variance_rmse&quot;: 0.016701391521485646}, {&quot;initial_lineages&quot;: 94, &quot;mean_rmse&quot;: 0.03143118979358449, &quot;seed&quot;: 6, &quot;variance_rmse&quot;: 0.010721567327966957}, {&quot;initial_lineages&quot;: 93, &quot;mean_rmse&quot;: 0.033201208619059314, &quot;seed&quot;: 7, &quot;variance_rmse&quot;: 0.014972008659669626}, {&quot;initial_lineages&quot;: 90, &quot;mean_rmse&quot;: 0.04494949454964067, &quot;seed&quot;: 8, &quot;variance_rmse&quot;: 0.009025010225729926}, {&quot;initial_lineages&quot;: 90, &quot;mean_rmse&quot;: 0.029897624645856453, &quot;seed&quot;: 9, &quot;variance_rmse&quot;: 0.01333153060143231}, {&quot;initial_lineages&quot;: 89, &quot;mean_rmse&quot;: 0.030289507432545555, &quot;seed&quot;: 10, &quot;variance_rmse&quot;: 0.013228520207296769}, {&quot;initial_lineages&quot;: 86, &quot;mean_rmse&quot;: 0.020186123836805462, &quot;seed&quot;: 11, &quot;variance_rmse&quot;: 0.011388094167257591}, {&quot;initial_lineages&quot;: 92, &quot;mean_rmse&quot;: 0.028693415624575162, &quot;seed&quot;: 12, &quot;variance_rmse&quot;: 0.017860335348710555}, {&quot;initial_lineages&quot;: 92, &quot;mean_rmse&quot;: 0.02762924806099016, &quot;seed&quot;: 13, &quot;variance_rmse&quot;: 0.013785017972613708}, {&quot;initial_lineages&quot;: 86, &quot;mean_rmse&quot;: 0.020797882132118334, &quot;seed&quot;: 14, &quot;variance_rmse&quot;: 0.01947941135117513}, {&quot;initial_lineages&quot;: 94, &quot;mean_rmse&quot;: 0.023938640718395465, &quot;seed&quot;: 15, &quot;variance_rmse&quot;: 0.013059237768216549}], &quot;checks&quot;: {&quot;current_states_not_collapsed&quot;: true, &quot;early_path_collapse&quot;: true, &quot;terminal_matches_filter&quot;: true}, &quot;collapse_first&quot;: {&quot;ancestor_weights&quot;: [0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], &quot;distinct_lineage_indices&quot;: 1, &quot;distinct_states&quot;: 1, &quot;lineage_weight_ess&quot;: 1.0, &quot;mean&quot;: -0.1442400455701427, &quot;positive_mass_lineage_indices&quot;: 1, &quot;sign_mass&quot;: {&quot;negative_probability&quot;: 1.0, &quot;positive_probability&quot;: 0.0, &quot;zero_probability&quot;: 0.0}, &quot;time&quot;: 0, &quot;variance&quot;: 0.0}, &quot;collapse_last&quot;: {&quot;ancestor_weights&quot;: [0.007032615036806848, 0.03977979964551166, 6.86055578967651e-12, 0.0003754286656021338, 3.5870404019322926e-14, 2.204480036222657e-05, 4.1402785502196744e-26, 1.0671979492931701e-05, 5.435775790293098e-12, 0.007867884181802082, 0.04401537227962835, 0.06699922272973767, 0.004387615275792012, 0.04912334414377761, 0.010715984179840928, 8.854323763096819e-20, 0.0005778674881357788, 5.347349474599426e-05, 0.09496377614016155, 0.0006538129941216782, 0.10475029964183935, 0.10423043135396806, 0.040423009949401054, 0.09983378899767728, 0.02085805443204047, 0.0028767863164694497, 1.1654863914808445e-06, 0.10264746579838142, 0.091158414391567, 1.071876034843297e-22, 7.002345823590533e-19, 0.10664167058441279], &quot;distinct_lineage_indices&quot;: 32, &quot;distinct_states&quot;: 32, &quot;lineage_weight_ess&quot;: 11.93519582509739, &quot;mean&quot;: -0.013562329531826893, &quot;positive_mass_lineage_indices&quot;: 32, &quot;sign_mass&quot;: {&quot;negative_probability&quot;: 0.6132663249027922, &quot;positive_probability&quot;: 0.38673367509720785, &quot;zero_probability&quot;: 0.0}, &quot;time&quot;: 63, &quot;variance&quot;: 0.007090951019556953}, &quot;collapse_settings&quot;: {&quot;a&quot;: 0.9, &quot;data&quot;: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], &quot;ess_fraction&quot;: 1.0, &quot;initial_mean&quot;: 0.0, &quot;initial_std&quot;: 2.0, &quot;observation&quot;: &quot;linear&quot;, &quot;observation_std&quot;: 0.1, &quot;particles&quot;: 32, &quot;process_std&quot;: 0.4, &quot;seed&quot;: 0}, &quot;domains&quot;: {&quot;lineages&quot;: [0, 32], &quot;mean&quot;: [-0.6, 0.8], &quot;variance&quot;: [0, 0.02]}, &quot;linear_settings&quot;: {&quot;a&quot;: 0.9, &quot;data&quot;: [0.1, 0.3, -0.2, 0.4, 0.7, 0.9, 0.2, -0.3, -0.6, -0.4, 0.1, 0.2], &quot;ess_fraction&quot;: 0.5, &quot;initial_mean&quot;: 0.0, &quot;initial_std&quot;: 2.0, &quot;observation&quot;: &quot;linear&quot;, &quot;observation_std&quot;: 0.5, &quot;particles&quot;: 512, &quot;process_std&quot;: 0.4, &quot;seed&quot;: 0}, &quot;mean_of_mean_rmse&quot;: 0.02992024644256584, &quot;mean_of_variance_rmse&quot;: 0.01374409043045791, &quot;selection&quot;: &quot;linear fixture inherited unchanged, all sixteen seeds0..15 retained; collapse fixed64zero observations,N32,seed0 first fixture inspected; development checks, not held-out smoothing accuracy, independent paths, budget recommendation or causal isolation&quot;, &quot;series&quot;: {&quot;filtered_mean&quot;: [0.0914694042977255, 0.20257634906652477, -0.021930948610856805, 0.18652822158857174, 0.4324357082520404, 0.6411232983742577, 0.3781525431428703, -0.02219026343064246, -0.32418350428809345, -0.3394827426800162, -0.10565122563871178, 0.05895577192636153], &quot;genealogy_mean&quot;: [0.1541776027302997, 0.1764387928229819, 0.12077042661177935, 0.27660504202564734, 0.4464409943113378, 0.515106029342181, 0.20373320915950216, -0.14481771932960355, -0.2813541197485067, -0.16958285851205526, -0.015780502096003582, 0.05895577192636153], &quot;genealogy_variance&quot;: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.002364142861620124, 0.0013605071706382684, 0.0003367054192048183, 0.001961568007649323, 0.002951366429434416, 0.0003246912161499025, 0.003689945763208639, 0.01224419348172242, 0.00807059028615971, 0.002841012682205424, 0.00317475526211053, 0.006865341636238517, 0.005465192725395906, 0.007090951019556953], &quot;lineage_count&quot;: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 4, 5, 7, 9, 17, 32], &quot;lineage_ess&quot;: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.2353891289929892, 1.2353891289929892, 1.2353891289929892, 1.2353891289929892, 1.2353891289929892, 2.2529840511270676, 2.2529840511270676, 2.2529840511270676, 2.522834716630839, 3.681979959983133, 5.847605584871634, 5.847711168033322, 7.464032640916647, 11.93519582509739], &quot;rts_mean&quot;: [0.1554423531682273, 0.1862323402451763, 0.13819012861030816, 0.3321741209717738, 0.48161720070174274, 0.4811171476051924, 0.18809059000128095, -0.11131498593503861, -0.2777813850466637, -0.21820100669199038, -0.03176579983708783, 0.0606163293576957], &quot;rts_variance&quot;: [0.009521314034665206, 0.009031214823742419, 0.009029956860999873, 0.009029953632122481, 0.009029953623834757, 0.009029953623813484, 0.00902995362381343, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813428, 0.009029953623813473, 0.0090299536238311, 0.009029953630698, 0.009029956306025162, 0.00903099860695171, 0.00943707650128592]}}</metadata>
+<rect width="1120" height="600" fill="white"/>
+<text x="28" y="34" font-family="Arial,sans-serif" font-size="25" font-weight="600" fill="#22283a" text-anchor="start">ParticleLab | current diversity does not restore early paths</text>
+<text x="28" y="62" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#22283a" text-anchor="start">Terminal-weighted retained genealogies, not backward simulation. Exact scalar linear RTS reference.</text>
+<text x="28" y="85" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#22283a" text-anchor="start">Fixed development fixtures. First panel: N=512, seed 0. Collapse panels: N=32, seed 0, 64 zero observations.</text>
+<text x="65" y="128" font-family="Arial,sans-serif" font-size="16" font-weight="600" fill="#22283a" text-anchor="start">A. Linear means</text>
+<path d="M65 380.000H345" stroke="#e0e5ea"/>
+<text x="57" y="384.0" font-family="Arial,sans-serif" font-size="11" font-weight="400" fill="#22283a" text-anchor="end">-0.6</text>
+<path d="M65 285.714H345" stroke="#e0e5ea"/>
+<text x="57" y="289.7142857142857" font-family="Arial,sans-serif" font-size="11" font-weight="400" fill="#22283a" text-anchor="end">0</text>
+<path d="M65 160.000H345" stroke="#e0e5ea"/>
+<text x="57" y="164.0" font-family="Arial,sans-serif" font-size="11" font-weight="400" fill="#22283a" text-anchor="end">0.8</text>
+<text x="65.0" y="403" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">0</text>
+<text x="192.27272727272725" y="403" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">5</text>
+<text x="345.0" y="403" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">11</text>
+<circle data-series="filtered_mean" data-index="0" data-value="0.091469404297725501" cx="65.000" cy="271.341" r="2.5" fill="#9299a4"/>
+<circle data-series="filtered_mean" data-index="1" data-value="0.20257634906652477" cx="90.455" cy="253.881" r="2.5" fill="#9299a4"/>
+<circle data-series="filtered_mean" data-index="2" data-value="-0.021930948610856805" cx="115.909" cy="289.161" r="2.5" fill="#9299a4"/>
+<circle data-series="filtered_mean" data-index="3" data-value="0.18652822158857174" cx="141.364" cy="256.403" r="2.5" fill="#9299a4"/>
+<circle data-series="filtered_mean" data-index="4" data-value="0.43243570825204042" cx="166.818" cy="217.760" r="2.5" fill="#9299a4"/>
+<circle data-series="filtered_mean" data-index="5" data-value="0.64112329837425774" cx="192.273" cy="184.966" r="2.5" fill="#9299a4"/>
+<circle data-series="filtered_mean" data-index="6" data-value="0.37815254314287028" cx="217.727" cy="226.290" r="2.5" fill="#9299a4"/>
+<circle data-series="filtered_mean" data-index="7" data-value="-0.022190263430642461" cx="243.182" cy="289.201" r="2.5" fill="#9299a4"/>
+<circle data-series="filtered_mean" data-index="8" data-value="-0.32418350428809345" cx="268.636" cy="336.657" r="2.5" fill="#9299a4"/>
+<circle data-series="filtered_mean" data-index="9" data-value="-0.33948274268001621" cx="294.091" cy="339.062" r="2.5" fill="#9299a4"/>
+<circle data-series="filtered_mean" data-index="10" data-value="-0.10565122563871178" cx="319.545" cy="302.317" r="2.5" fill="#9299a4"/>
+<circle data-series="filtered_mean" data-index="11" data-value="0.058955771926361533" cx="345.000" cy="276.450" r="2.5" fill="#9299a4"/>
+<polyline data-series="filtered_mean" points="65.000,271.341 90.455,253.881 115.909,289.161 141.364,256.403 166.818,217.760 192.273,184.966 217.727,226.290 243.182,289.201 268.636,336.657 294.091,339.062 319.545,302.317 345.000,276.450" stroke="#9299a4" fill="none" stroke-width="2" stroke-dasharray="2 4"/>
+<circle data-series="genealogy_mean" data-index="0" data-value="0.15417760273029971" cx="65.000" cy="261.486" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_mean" data-index="1" data-value="0.17643879282298189" cx="90.455" cy="257.988" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_mean" data-index="2" data-value="0.12077042661177935" cx="115.909" cy="266.736" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_mean" data-index="3" data-value="0.27660504202564734" cx="141.364" cy="242.248" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_mean" data-index="4" data-value="0.44644099431133782" cx="166.818" cy="215.559" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_mean" data-index="5" data-value="0.51510602934218097" cx="192.273" cy="204.769" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_mean" data-index="6" data-value="0.20373320915950216" cx="217.727" cy="253.699" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_mean" data-index="7" data-value="-0.14481771932960355" cx="243.182" cy="308.471" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_mean" data-index="8" data-value="-0.28135411974850671" cx="268.636" cy="329.927" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_mean" data-index="9" data-value="-0.16958285851205526" cx="294.091" cy="312.363" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_mean" data-index="10" data-value="-0.015780502096003582" cx="319.545" cy="288.194" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_mean" data-index="11" data-value="0.058955771926361533" cx="345.000" cy="276.450" r="2.5" fill="#13877d"/>
+<polyline data-series="genealogy_mean" points="65.000,261.486 90.455,257.988 115.909,266.736 141.364,242.248 166.818,215.559 192.273,204.769 217.727,253.699 243.182,308.471 268.636,329.927 294.091,312.363 319.545,288.194 345.000,276.450" stroke="#13877d" fill="none" stroke-width="2" stroke-dasharray=""/>
+<circle data-series="rts_mean" data-index="0" data-value="0.1554423531682273" cx="65.000" cy="261.288" r="2.5" fill="#22283a"/>
+<circle data-series="rts_mean" data-index="1" data-value="0.18623234024517629" cx="90.455" cy="256.449" r="2.5" fill="#22283a"/>
+<circle data-series="rts_mean" data-index="2" data-value="0.13819012861030816" cx="115.909" cy="263.999" r="2.5" fill="#22283a"/>
+<circle data-series="rts_mean" data-index="3" data-value="0.33217412097177379" cx="141.364" cy="233.515" r="2.5" fill="#22283a"/>
+<circle data-series="rts_mean" data-index="4" data-value="0.48161720070174274" cx="166.818" cy="210.032" r="2.5" fill="#22283a"/>
+<circle data-series="rts_mean" data-index="5" data-value="0.48111714760519242" cx="192.273" cy="210.110" r="2.5" fill="#22283a"/>
+<circle data-series="rts_mean" data-index="6" data-value="0.18809059000128095" cx="217.727" cy="256.157" r="2.5" fill="#22283a"/>
+<circle data-series="rts_mean" data-index="7" data-value="-0.11131498593503861" cx="243.182" cy="303.207" r="2.5" fill="#22283a"/>
+<circle data-series="rts_mean" data-index="8" data-value="-0.27778138504666372" cx="268.636" cy="329.366" r="2.5" fill="#22283a"/>
+<circle data-series="rts_mean" data-index="9" data-value="-0.21820100669199038" cx="294.091" cy="320.003" r="2.5" fill="#22283a"/>
+<circle data-series="rts_mean" data-index="10" data-value="-0.031765799837087827" cx="319.545" cy="290.706" r="2.5" fill="#22283a"/>
+<circle data-series="rts_mean" data-index="11" data-value="0.060616329357695703" cx="345.000" cy="276.189" r="2.5" fill="#22283a"/>
+<polyline data-series="rts_mean" points="65.000,261.288 90.455,256.449 115.909,263.999 141.364,233.515 166.818,210.032 192.273,210.110 217.727,256.157 243.182,303.207 268.636,329.366 294.091,320.003 319.545,290.706 345.000,276.189" stroke="#22283a" fill="none" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="430" y="128" font-family="Arial,sans-serif" font-size="16" font-weight="600" fill="#22283a" text-anchor="start">B. Retrospective latent variance</text>
+<path d="M430 380.000H710" stroke="#e0e5ea"/>
+<text x="422" y="384.0" font-family="Arial,sans-serif" font-size="11" font-weight="400" fill="#22283a" text-anchor="end">0</text>
+<path d="M430 270.000H710" stroke="#e0e5ea"/>
+<text x="422" y="274.0" font-family="Arial,sans-serif" font-size="11" font-weight="400" fill="#22283a" text-anchor="end">0.01</text>
+<path d="M430 160.000H710" stroke="#e0e5ea"/>
+<text x="422" y="164.0" font-family="Arial,sans-serif" font-size="11" font-weight="400" fill="#22283a" text-anchor="end">0.02</text>
+<text x="430.0" y="403" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">0</text>
+<text x="567.7777777777778" y="403" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">31</text>
+<text x="710.0" y="403" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">63</text>
+<circle data-series="genealogy_variance" data-index="0" data-value="0" cx="430.000" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="1" data-value="0" cx="434.444" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="2" data-value="0" cx="438.889" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="3" data-value="0" cx="443.333" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="4" data-value="0" cx="447.778" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="5" data-value="0" cx="452.222" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="6" data-value="0" cx="456.667" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="7" data-value="0" cx="461.111" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="8" data-value="0" cx="465.556" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="9" data-value="0" cx="470.000" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="10" data-value="0" cx="474.444" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="11" data-value="0" cx="478.889" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="12" data-value="0" cx="483.333" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="13" data-value="0" cx="487.778" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="14" data-value="0" cx="492.222" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="15" data-value="0" cx="496.667" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="16" data-value="0" cx="501.111" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="17" data-value="0" cx="505.556" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="18" data-value="0" cx="510.000" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="19" data-value="0" cx="514.444" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="20" data-value="0" cx="518.889" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="21" data-value="0" cx="523.333" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="22" data-value="0" cx="527.778" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="23" data-value="0" cx="532.222" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="24" data-value="0" cx="536.667" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="25" data-value="0" cx="541.111" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="26" data-value="0" cx="545.556" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="27" data-value="0" cx="550.000" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="28" data-value="0" cx="554.444" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="29" data-value="0" cx="558.889" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="30" data-value="0" cx="563.333" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="31" data-value="0" cx="567.778" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="32" data-value="0" cx="572.222" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="33" data-value="0" cx="576.667" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="34" data-value="0" cx="581.111" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="35" data-value="0" cx="585.556" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="36" data-value="0" cx="590.000" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="37" data-value="0" cx="594.444" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="38" data-value="0" cx="598.889" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="39" data-value="0" cx="603.333" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="40" data-value="0" cx="607.778" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="41" data-value="0" cx="612.222" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="42" data-value="0" cx="616.667" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="43" data-value="0" cx="621.111" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="44" data-value="0" cx="625.556" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="45" data-value="0" cx="630.000" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="46" data-value="0" cx="634.444" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="47" data-value="0" cx="638.889" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="48" data-value="0" cx="643.333" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="49" data-value="0" cx="647.778" cy="380.000" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="50" data-value="0.0023641428616201238" cx="652.222" cy="353.994" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="51" data-value="0.0013605071706382684" cx="656.667" cy="365.034" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="52" data-value="0.00033670541920481829" cx="661.111" cy="376.296" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="53" data-value="0.0019615680076493229" cx="665.556" cy="358.423" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="54" data-value="0.002951366429434416" cx="670.000" cy="347.535" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="55" data-value="0.0003246912161499025" cx="674.444" cy="376.428" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="56" data-value="0.0036899457632086391" cx="678.889" cy="339.411" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="57" data-value="0.012244193481722419" cx="683.333" cy="245.314" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="58" data-value="0.0080705902861597095" cx="687.778" cy="291.224" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="59" data-value="0.0028410126822054241" cx="692.222" cy="348.749" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="60" data-value="0.0031747552621105299" cx="696.667" cy="345.078" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="61" data-value="0.0068653416362385172" cx="701.111" cy="304.481" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="62" data-value="0.0054651927253959063" cx="705.556" cy="319.883" r="2.5" fill="#13877d"/>
+<circle data-series="genealogy_variance" data-index="63" data-value="0.0070909510195569531" cx="710.000" cy="302.000" r="2.5" fill="#13877d"/>
+<polyline data-series="genealogy_variance" points="430.000,380.000 434.444,380.000 438.889,380.000 443.333,380.000 447.778,380.000 452.222,380.000 456.667,380.000 461.111,380.000 465.556,380.000 470.000,380.000 474.444,380.000 478.889,380.000 483.333,380.000 487.778,380.000 492.222,380.000 496.667,380.000 501.111,380.000 505.556,380.000 510.000,380.000 514.444,380.000 518.889,380.000 523.333,380.000 527.778,380.000 532.222,380.000 536.667,380.000 541.111,380.000 545.556,380.000 550.000,380.000 554.444,380.000 558.889,380.000 563.333,380.000 567.778,380.000 572.222,380.000 576.667,380.000 581.111,380.000 585.556,380.000 590.000,380.000 594.444,380.000 598.889,380.000 603.333,380.000 607.778,380.000 612.222,380.000 616.667,380.000 621.111,380.000 625.556,380.000 630.000,380.000 634.444,380.000 638.889,380.000 643.333,380.000 647.778,380.000 652.222,353.994 656.667,365.034 661.111,376.296 665.556,358.423 670.000,347.535 674.444,376.428 678.889,339.411 683.333,245.314 687.778,291.224 692.222,348.749 696.667,345.078 701.111,304.481 705.556,319.883 710.000,302.000" stroke="#13877d" fill="none" stroke-width="2" stroke-dasharray=""/>
+<circle data-series="rts_variance" data-index="0" data-value="0.0095213140346652059" cx="430.000" cy="275.266" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="1" data-value="0.009031214823742419" cx="434.444" cy="280.657" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="2" data-value="0.0090299568609998725" cx="438.889" cy="280.670" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="3" data-value="0.0090299536321224814" cx="443.333" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="4" data-value="0.0090299536238347567" cx="447.778" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="5" data-value="0.0090299536238134838" cx="452.222" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="6" data-value="0.00902995362381343" cx="456.667" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="7" data-value="0.0090299536238134283" cx="461.111" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="8" data-value="0.0090299536238134283" cx="465.556" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="9" data-value="0.0090299536238134283" cx="470.000" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="10" data-value="0.0090299536238134283" cx="474.444" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="11" data-value="0.0090299536238134283" cx="478.889" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="12" data-value="0.0090299536238134283" cx="483.333" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="13" data-value="0.0090299536238134283" cx="487.778" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="14" data-value="0.0090299536238134283" cx="492.222" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="15" data-value="0.0090299536238134283" cx="496.667" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="16" data-value="0.0090299536238134283" cx="501.111" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="17" data-value="0.0090299536238134283" cx="505.556" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="18" data-value="0.0090299536238134283" cx="510.000" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="19" data-value="0.0090299536238134283" cx="514.444" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="20" data-value="0.0090299536238134283" cx="518.889" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="21" data-value="0.0090299536238134283" cx="523.333" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="22" data-value="0.0090299536238134283" cx="527.778" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="23" data-value="0.0090299536238134283" cx="532.222" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="24" data-value="0.0090299536238134283" cx="536.667" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="25" data-value="0.0090299536238134283" cx="541.111" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="26" data-value="0.0090299536238134283" cx="545.556" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="27" data-value="0.0090299536238134283" cx="550.000" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="28" data-value="0.0090299536238134283" cx="554.444" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="29" data-value="0.0090299536238134283" cx="558.889" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="30" data-value="0.0090299536238134283" cx="563.333" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="31" data-value="0.0090299536238134283" cx="567.778" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="32" data-value="0.0090299536238134283" cx="572.222" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="33" data-value="0.0090299536238134283" cx="576.667" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="34" data-value="0.0090299536238134283" cx="581.111" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="35" data-value="0.0090299536238134283" cx="585.556" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="36" data-value="0.0090299536238134283" cx="590.000" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="37" data-value="0.0090299536238134283" cx="594.444" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="38" data-value="0.0090299536238134283" cx="598.889" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="39" data-value="0.0090299536238134283" cx="603.333" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="40" data-value="0.0090299536238134283" cx="607.778" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="41" data-value="0.0090299536238134283" cx="612.222" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="42" data-value="0.0090299536238134283" cx="616.667" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="43" data-value="0.0090299536238134283" cx="621.111" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="44" data-value="0.0090299536238134283" cx="625.556" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="45" data-value="0.0090299536238134283" cx="630.000" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="46" data-value="0.0090299536238134283" cx="634.444" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="47" data-value="0.0090299536238134283" cx="638.889" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="48" data-value="0.0090299536238134283" cx="643.333" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="49" data-value="0.0090299536238134283" cx="647.778" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="50" data-value="0.0090299536238134283" cx="652.222" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="51" data-value="0.0090299536238134283" cx="656.667" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="52" data-value="0.0090299536238134283" cx="661.111" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="53" data-value="0.0090299536238134283" cx="665.556" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="54" data-value="0.0090299536238134283" cx="670.000" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="55" data-value="0.0090299536238134283" cx="674.444" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="56" data-value="0.0090299536238134283" cx="678.889" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="57" data-value="0.0090299536238134283" cx="683.333" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="58" data-value="0.0090299536238134734" cx="687.778" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="59" data-value="0.0090299536238310999" cx="692.222" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="60" data-value="0.0090299536306979993" cx="696.667" cy="280.671" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="61" data-value="0.0090299563060251622" cx="701.111" cy="280.670" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="62" data-value="0.0090309986069517095" cx="705.556" cy="280.659" r="2.5" fill="#22283a"/>
+<circle data-series="rts_variance" data-index="63" data-value="0.0094370765012859199" cx="710.000" cy="276.192" r="2.5" fill="#22283a"/>
+<polyline data-series="rts_variance" points="430.000,275.266 434.444,280.657 438.889,280.670 443.333,280.671 447.778,280.671 452.222,280.671 456.667,280.671 461.111,280.671 465.556,280.671 470.000,280.671 474.444,280.671 478.889,280.671 483.333,280.671 487.778,280.671 492.222,280.671 496.667,280.671 501.111,280.671 505.556,280.671 510.000,280.671 514.444,280.671 518.889,280.671 523.333,280.671 527.778,280.671 532.222,280.671 536.667,280.671 541.111,280.671 545.556,280.671 550.000,280.671 554.444,280.671 558.889,280.671 563.333,280.671 567.778,280.671 572.222,280.671 576.667,280.671 581.111,280.671 585.556,280.671 590.000,280.671 594.444,280.671 598.889,280.671 603.333,280.671 607.778,280.671 612.222,280.671 616.667,280.671 621.111,280.671 625.556,280.671 630.000,280.671 634.444,280.671 638.889,280.671 643.333,280.671 647.778,280.671 652.222,280.671 656.667,280.671 661.111,280.671 665.556,280.671 670.000,280.671 674.444,280.671 678.889,280.671 683.333,280.671 687.778,280.671 692.222,280.671 696.667,280.671 701.111,280.670 705.556,280.659 710.000,276.192" stroke="#22283a" fill="none" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="795" y="128" font-family="Arial,sans-serif" font-size="16" font-weight="600" fill="#22283a" text-anchor="start">C. Surviving earlier lineages</text>
+<path d="M795 380.000H1075" stroke="#e0e5ea"/>
+<text x="787" y="384.0" font-family="Arial,sans-serif" font-size="11" font-weight="400" fill="#22283a" text-anchor="end">0</text>
+<path d="M795 270.000H1075" stroke="#e0e5ea"/>
+<text x="787" y="274.0" font-family="Arial,sans-serif" font-size="11" font-weight="400" fill="#22283a" text-anchor="end">16</text>
+<path d="M795 160.000H1075" stroke="#e0e5ea"/>
+<text x="787" y="164.0" font-family="Arial,sans-serif" font-size="11" font-weight="400" fill="#22283a" text-anchor="end">32</text>
+<text x="795.0" y="403" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">0</text>
+<text x="932.7777777777778" y="403" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">31</text>
+<text x="1075.0" y="403" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">63</text>
+<circle data-series="lineage_count" data-index="0" data-value="1" cx="795.000" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="1" data-value="1" cx="799.444" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="2" data-value="1" cx="803.889" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="3" data-value="1" cx="808.333" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="4" data-value="1" cx="812.778" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="5" data-value="1" cx="817.222" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="6" data-value="1" cx="821.667" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="7" data-value="1" cx="826.111" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="8" data-value="1" cx="830.556" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="9" data-value="1" cx="835.000" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="10" data-value="1" cx="839.444" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="11" data-value="1" cx="843.889" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="12" data-value="1" cx="848.333" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="13" data-value="1" cx="852.778" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="14" data-value="1" cx="857.222" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="15" data-value="1" cx="861.667" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="16" data-value="1" cx="866.111" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="17" data-value="1" cx="870.556" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="18" data-value="1" cx="875.000" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="19" data-value="1" cx="879.444" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="20" data-value="1" cx="883.889" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="21" data-value="1" cx="888.333" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="22" data-value="1" cx="892.778" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="23" data-value="1" cx="897.222" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="24" data-value="1" cx="901.667" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="25" data-value="1" cx="906.111" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="26" data-value="1" cx="910.556" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="27" data-value="1" cx="915.000" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="28" data-value="1" cx="919.444" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="29" data-value="1" cx="923.889" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="30" data-value="1" cx="928.333" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="31" data-value="1" cx="932.778" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="32" data-value="1" cx="937.222" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="33" data-value="1" cx="941.667" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="34" data-value="1" cx="946.111" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="35" data-value="1" cx="950.556" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="36" data-value="1" cx="955.000" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="37" data-value="1" cx="959.444" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="38" data-value="1" cx="963.889" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="39" data-value="1" cx="968.333" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="40" data-value="1" cx="972.778" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="41" data-value="1" cx="977.222" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="42" data-value="1" cx="981.667" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="43" data-value="1" cx="986.111" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="44" data-value="1" cx="990.556" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="45" data-value="1" cx="995.000" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="46" data-value="1" cx="999.444" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="47" data-value="1" cx="1003.889" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="48" data-value="1" cx="1008.333" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="49" data-value="1" cx="1012.778" cy="373.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="50" data-value="2" cx="1017.222" cy="366.250" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="51" data-value="2" cx="1021.667" cy="366.250" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="52" data-value="2" cx="1026.111" cy="366.250" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="53" data-value="2" cx="1030.556" cy="366.250" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="54" data-value="2" cx="1035.000" cy="366.250" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="55" data-value="3" cx="1039.444" cy="359.375" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="56" data-value="3" cx="1043.889" cy="359.375" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="57" data-value="3" cx="1048.333" cy="359.375" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="58" data-value="4" cx="1052.778" cy="352.500" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="59" data-value="5" cx="1057.222" cy="345.625" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="60" data-value="7" cx="1061.667" cy="331.875" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="61" data-value="9" cx="1066.111" cy="318.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="62" data-value="17" cx="1070.556" cy="263.125" r="2.5" fill="#8264bb"/>
+<circle data-series="lineage_count" data-index="63" data-value="32" cx="1075.000" cy="160.000" r="2.5" fill="#8264bb"/>
+<polyline data-series="lineage_count" points="795.000,373.125 799.444,373.125 803.889,373.125 808.333,373.125 812.778,373.125 817.222,373.125 821.667,373.125 826.111,373.125 830.556,373.125 835.000,373.125 839.444,373.125 843.889,373.125 848.333,373.125 852.778,373.125 857.222,373.125 861.667,373.125 866.111,373.125 870.556,373.125 875.000,373.125 879.444,373.125 883.889,373.125 888.333,373.125 892.778,373.125 897.222,373.125 901.667,373.125 906.111,373.125 910.556,373.125 915.000,373.125 919.444,373.125 923.889,373.125 928.333,373.125 932.778,373.125 937.222,373.125 941.667,373.125 946.111,373.125 950.556,373.125 955.000,373.125 959.444,373.125 963.889,373.125 968.333,373.125 972.778,373.125 977.222,373.125 981.667,373.125 986.111,373.125 990.556,373.125 995.000,373.125 999.444,373.125 1003.889,373.125 1008.333,373.125 1012.778,373.125 1017.222,366.250 1021.667,366.250 1026.111,366.250 1030.556,366.250 1035.000,366.250 1039.444,359.375 1043.889,359.375 1048.333,359.375 1052.778,352.500 1057.222,345.625 1061.667,331.875 1066.111,318.125 1070.556,263.125 1075.000,160.000" stroke="#8264bb" fill="none" stroke-width="2" stroke-dasharray=""/>
+<circle data-series="lineage_ess" data-index="0" data-value="1" cx="795.000" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="1" data-value="1" cx="799.444" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="2" data-value="1" cx="803.889" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="3" data-value="1" cx="808.333" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="4" data-value="1" cx="812.778" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="5" data-value="1" cx="817.222" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="6" data-value="1" cx="821.667" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="7" data-value="1" cx="826.111" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="8" data-value="1" cx="830.556" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="9" data-value="1" cx="835.000" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="10" data-value="1" cx="839.444" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="11" data-value="1" cx="843.889" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="12" data-value="1" cx="848.333" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="13" data-value="1" cx="852.778" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="14" data-value="1" cx="857.222" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="15" data-value="1" cx="861.667" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="16" data-value="1" cx="866.111" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="17" data-value="1" cx="870.556" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="18" data-value="1" cx="875.000" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="19" data-value="1" cx="879.444" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="20" data-value="1" cx="883.889" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="21" data-value="1" cx="888.333" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="22" data-value="1" cx="892.778" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="23" data-value="1" cx="897.222" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="24" data-value="1" cx="901.667" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="25" data-value="1" cx="906.111" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="26" data-value="1" cx="910.556" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="27" data-value="1" cx="915.000" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="28" data-value="1" cx="919.444" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="29" data-value="1" cx="923.889" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="30" data-value="1" cx="928.333" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="31" data-value="1" cx="932.778" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="32" data-value="1" cx="937.222" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="33" data-value="1" cx="941.667" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="34" data-value="1" cx="946.111" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="35" data-value="1" cx="950.556" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="36" data-value="1" cx="955.000" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="37" data-value="1" cx="959.444" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="38" data-value="1" cx="963.889" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="39" data-value="1" cx="968.333" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="40" data-value="1" cx="972.778" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="41" data-value="1" cx="977.222" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="42" data-value="1" cx="981.667" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="43" data-value="1" cx="986.111" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="44" data-value="1" cx="990.556" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="45" data-value="1" cx="995.000" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="46" data-value="1" cx="999.444" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="47" data-value="1" cx="1003.889" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="48" data-value="1" cx="1008.333" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="49" data-value="1" cx="1012.778" cy="373.125" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="50" data-value="1.2353891289929892" cx="1017.222" cy="371.507" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="51" data-value="1.2353891289929892" cx="1021.667" cy="371.507" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="52" data-value="1.2353891289929892" cx="1026.111" cy="371.507" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="53" data-value="1.2353891289929892" cx="1030.556" cy="371.507" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="54" data-value="1.2353891289929892" cx="1035.000" cy="371.507" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="55" data-value="2.2529840511270676" cx="1039.444" cy="364.511" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="56" data-value="2.2529840511270676" cx="1043.889" cy="364.511" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="57" data-value="2.2529840511270676" cx="1048.333" cy="364.511" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="58" data-value="2.5228347166308391" cx="1052.778" cy="362.656" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="59" data-value="3.6819799599831331" cx="1057.222" cy="354.686" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="60" data-value="5.8476055848716344" cx="1061.667" cy="339.798" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="61" data-value="5.8477111680333218" cx="1066.111" cy="339.797" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="62" data-value="7.4640326409166473" cx="1070.556" cy="328.685" r="2.5" fill="#13877d"/>
+<circle data-series="lineage_ess" data-index="63" data-value="11.93519582509739" cx="1075.000" cy="297.946" r="2.5" fill="#13877d"/>
+<polyline data-series="lineage_ess" points="795.000,373.125 799.444,373.125 803.889,373.125 808.333,373.125 812.778,373.125 817.222,373.125 821.667,373.125 826.111,373.125 830.556,373.125 835.000,373.125 839.444,373.125 843.889,373.125 848.333,373.125 852.778,373.125 857.222,373.125 861.667,373.125 866.111,373.125 870.556,373.125 875.000,373.125 879.444,373.125 883.889,373.125 888.333,373.125 892.778,373.125 897.222,373.125 901.667,373.125 906.111,373.125 910.556,373.125 915.000,373.125 919.444,373.125 923.889,373.125 928.333,373.125 932.778,373.125 937.222,373.125 941.667,373.125 946.111,373.125 950.556,373.125 955.000,373.125 959.444,373.125 963.889,373.125 968.333,373.125 972.778,373.125 977.222,373.125 981.667,373.125 986.111,373.125 990.556,373.125 995.000,373.125 999.444,373.125 1003.889,373.125 1008.333,373.125 1012.778,373.125 1017.222,371.507 1021.667,371.507 1026.111,371.507 1030.556,371.507 1035.000,371.507 1039.444,364.511 1043.889,364.511 1048.333,364.511 1052.778,362.656 1057.222,354.686 1061.667,339.798 1066.111,339.797 1070.556,328.685 1075.000,297.946" stroke="#13877d" fill="none" stroke-width="2" stroke-dasharray="2 4"/>
+<text x="65" y="434" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="start">Time. Gray dotted: particle filtering.</text>
+<text x="65" y="454" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="start">Teal: genealogy. Black dashed: RTS.</text>
+<text x="430" y="434" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="start">Time. Teal: genealogy variance.</text>
+<text x="430" y="454" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="start">Black dashed: exact RTS variance.</text>
+<text x="795" y="434" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="start">Time. Purple: unique ancestor indices.</text>
+<text x="795" y="454" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="start">Teal dotted: aggregated lineage ESS.</text>
+<text x="28" y="499" font-family="Arial,sans-serif" font-size="15" font-weight="600" fill="#22283a" text-anchor="start">At time 0: one surviving path, particle variance 0; exact smoothed variance .009521314.</text>
+<text x="28" y="525" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#22283a" text-anchor="start">At time 63: 32 distinct current states. Positive process noise cannot recreate discarded past paths.</text>
+<text x="28" y="551" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#22283a" text-anchor="start">All sixteen linear seeds 0..15 are retained in metadata. No independent-path, calibration or general accuracy claim.</text>
+<text x="28" y="577" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#22283a" text-anchor="start">The mean/variance errors compare finite approximations to the supplied model, not to real-world truth.</text>
+</svg>
