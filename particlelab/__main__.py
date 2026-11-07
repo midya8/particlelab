@@ -7,7 +7,7 @@ FIELDS={'data','a','process_std','observation_std','initial_mean','initial_std'}
 
 
 def main():
-    parser=argparse.ArgumentParser(description='Auditable scalar bootstrap particle filtering and exact linear Gaussian references')
+    parser=argparse.ArgumentParser(prog='particlelab',description='Auditable scalar bootstrap particle filtering and exact linear Gaussian references')
     commands=parser.add_subparsers(dest='command',required=True)
     commands.add_parser('demo',help='run fixed linear reference and static-support failure audits')
     for name in ['filter','kalman']:
