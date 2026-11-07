@@ -1,0 +1,272 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1000" viewBox="0 0 1120 1000" role="img" aria-labelledby="title desc">
+<title id="title">ParticleLab: full weight ESS is not recovered uncertainty</title>
+<desc id="desc">All12 linear-filter points with plus/minus one standard deviation moment summaries, and all 20 static-support failure points. Exact Kalman reference, particle variances, weight ESS and initial ancestry. No calibration or convergence claim.</desc>
+<metadata id="plotted-data">{&quot;average_mean_rmse&quot;: 0.01610169039000066, &quot;average_variance_rmse&quot;: 0.007947342790867491, &quot;domains&quot;: {&quot;ess&quot;: [0, 32], &quot;linear&quot;: [-1, 1.5], &quot;roots&quot;: [0, 32], &quot;variance&quot;: [0, 0.06]}, &quot;linear&quot;: [{&quot;exact_mean&quot;: 0.09411764705882353, &quot;exact_variance&quot;: 0.23529411764705885, &quot;observation&quot;: 0.1, &quot;particle_mean&quot;: 0.0914694042977255, &quot;particle_variance&quot;: 0.23882078472162568, &quot;time&quot;: 0}, {&quot;exact_mean&quot;: 0.21038197845249756, &quot;exact_variance&quot;: 0.1459353574926543, &quot;observation&quot;: 0.3, &quot;particle_mean&quot;: 0.20257634906652477, &quot;particle_variance&quot;: 0.14366727563568216, &quot;time&quot;: 1}, {&quot;exact_mean&quot;: -0.01572408677915818, &quot;exact_variance&quot;: 0.1316753198590766, &quot;observation&quot;: -0.2, &quot;particle_mean&quot;: -0.021930948610856805, &quot;particle_variance&quot;: 0.12949244986153732, &quot;time&quot;: 2}, {&quot;exact_mean&quot;: 0.19960028083523812, &quot;exact_variance&quot;: 0.12902999688210082, &quot;observation&quot;: 0.4, &quot;particle_mean&quot;: 0.18652822158857174, &quot;particle_variance&quot;: 0.14147716063681515, &quot;time&quot;: 3}, {&quot;exact_mean&quot;: 0.4471597243252149, &quot;exact_variance&quot;: 0.12852621334959624, &quot;observation&quot;: 0.7, &quot;particle_mean&quot;: 0.4324357082520404, &quot;particle_variance&quot;: 0.13458254809983233, &quot;time&quot;: 4}, {&quot;exact_mean&quot;: 0.6580479401189641, &quot;exact_variance&quot;: 0.12842979522344636, &quot;observation&quot;: 0.9, &quot;particle_mean&quot;: 0.6411232983742577, &quot;particle_variance&quot;: 0.12005716800092896, &quot;time&quot;: 5}, {&quot;exact_mean&quot;: 0.39076929844034125, &quot;exact_variance&quot;: 0.12841132449751688, &quot;observation&quot;: 0.2, &quot;particle_mean&quot;: 0.3781525431428703, &quot;particle_variance&quot;: 0.1279256852639742, &quot;time&quot;: 6}, {&quot;exact_mean&quot;: 0.016962873243023868, &quot;exact_variance&quot;: 0.1284077854380371, &quot;observation&quot;: -0.3, &quot;particle_mean&quot;: -0.02219026343064246, &quot;particle_variance&quot;: 0.12373780147949334, &quot;time&quot;: 7}, {&quot;exact_mean&quot;: -0.3007518241893163, &quot;exact_variance&quot;: 0.12840710731761756, &quot;observation&quot;: -0.6, &quot;particle_mean&quot;: -0.32418350428809345, &quot;particle_variance&quot;: 0.12406655469207196, &quot;time&quot;: 8}, {&quot;exact_mean&quot;: -0.3371007279109325, &quot;exact_variance&quot;: 0.1284069773818643, &quot;observation&quot;: -0.4, &quot;particle_mean&quot;: -0.3394827426800162, &quot;particle_variance&quot;: 0.12991437848271015, &quot;time&quot;: 9}, {&quot;exact_mean&quot;: -0.09619799638096779, &quot;exact_variance&quot;: 0.12840695248463221, &quot;observation&quot;: 0.1, &quot;particle_mean&quot;: -0.10565122563871178, &quot;particle_variance&quot;: 0.13170295481296931, &quot;time&quot;: 10}, {&quot;exact_mean&quot;: 0.0606163293576957, &quot;exact_variance&quot;: 0.12840694771402597, &quot;observation&quot;: 0.2, &quot;particle_mean&quot;: 0.05895577192636153, &quot;particle_variance&quot;: 0.12691835857950276, &quot;time&quot;: 11}], &quot;linear_settings&quot;: {&quot;a&quot;: 0.9, &quot;ess_fraction&quot;: 0.5, &quot;initial_mean&quot;: 0.0, &quot;initial_std&quot;: 2.0, &quot;observation&quot;: &quot;linear&quot;, &quot;observation_std&quot;: 0.5, &quot;particles&quot;: 512, &quot;process_std&quot;: 0.4, &quot;seed&quot;: 0}, &quot;seed_errors&quot;: [{&quot;log_evidence_error&quot;: -0.023390671532894203, &quot;mean_rmse&quot;: 0.016123415427842888, &quot;seed&quot;: 0, &quot;variance_rmse&quot;: 0.005325217052804406}, {&quot;log_evidence_error&quot;: -0.025806744842485685, &quot;mean_rmse&quot;: 0.024709458018283094, &quot;seed&quot;: 1, &quot;variance_rmse&quot;: 0.006705584879188291}, {&quot;log_evidence_error&quot;: -0.21726173679050298, &quot;mean_rmse&quot;: 0.01570211883389839, &quot;seed&quot;: 2, &quot;variance_rmse&quot;: 0.008545945227587837}, {&quot;log_evidence_error&quot;: -0.08375084384533871, &quot;mean_rmse&quot;: 0.015019816914305812, &quot;seed&quot;: 3, &quot;variance_rmse&quot;: 0.008269873436590518}, {&quot;log_evidence_error&quot;: 0.15224950819408356, &quot;mean_rmse&quot;: 0.014279500960965391, &quot;seed&quot;: 4, &quot;variance_rmse&quot;: 0.0108597018427729}, {&quot;log_evidence_error&quot;: -0.1642896526161195, &quot;mean_rmse&quot;: 0.022420376726800372, &quot;seed&quot;: 5, &quot;variance_rmse&quot;: 0.01147385521675319}, {&quot;log_evidence_error&quot;: 0.1488070974687723, &quot;mean_rmse&quot;: 0.015143110169893337, &quot;seed&quot;: 6, &quot;variance_rmse&quot;: 0.009280097242624198}, {&quot;log_evidence_error&quot;: 0.3017999880018323, &quot;mean_rmse&quot;: 0.014932481610183245, &quot;seed&quot;: 7, &quot;variance_rmse&quot;: 0.007935632126239297}, {&quot;log_evidence_error&quot;: -0.007010435049647157, &quot;mean_rmse&quot;: 0.013227734624960038, &quot;seed&quot;: 8, &quot;variance_rmse&quot;: 0.005187429520780711}, {&quot;log_evidence_error&quot;: 0.11611390905827434, &quot;mean_rmse&quot;: 0.014545530603129542, &quot;seed&quot;: 9, &quot;variance_rmse&quot;: 0.008535555241899457}, {&quot;log_evidence_error&quot;: -0.15863547878234563, &quot;mean_rmse&quot;: 0.01651805670510128, &quot;seed&quot;: 10, &quot;variance_rmse&quot;: 0.005433472689444308}, {&quot;log_evidence_error&quot;: 0.018418328346834656, &quot;mean_rmse&quot;: 0.015269869964471845, &quot;seed&quot;: 11, &quot;variance_rmse&quot;: 0.006934938824885417}, {&quot;log_evidence_error&quot;: -0.07672804310478476, &quot;mean_rmse&quot;: 0.011355798699573793, &quot;seed&quot;: 12, &quot;variance_rmse&quot;: 0.007709825280281378}, {&quot;log_evidence_error&quot;: 0.001125193848597661, &quot;mean_rmse&quot;: 0.011970111407919795, &quot;seed&quot;: 13, &quot;variance_rmse&quot;: 0.006461281093839637}, {&quot;log_evidence_error&quot;: 0.0489637044012472, &quot;mean_rmse&quot;: 0.01764745278899426, &quot;seed&quot;: 14, &quot;variance_rmse&quot;: 0.010683274735407406}, {&quot;log_evidence_error&quot;: 0.10968297589516851, &quot;mean_rmse&quot;: 0.018762212783687456, &quot;seed&quot;: 15, &quot;variance_rmse&quot;: 0.007815800242780903}], &quot;static&quot;: [{&quot;ess_after&quot;: 32.0, &quot;ess_before&quot;: 1.863035701882715, &quot;ess_without_resampling&quot;: 1.863035701882715, &quot;exact_variance&quot;: 0.009988901220865706, &quot;no_resampling_variance&quot;: 0.04838702509502212, &quot;particle_variance&quot;: 0.04838702509502212, &quot;roots_after&quot;: 2, &quot;roots_without_resampling&quot;: 32, &quot;time&quot;: 0}, {&quot;ess_after&quot;: 32.0, &quot;ess_before&quot;: 30.292005720738434, &quot;ess_without_resampling&quot;: 1.5933794480004646, &quot;exact_variance&quot;: 0.004997223764575237, &quot;no_resampling_variance&quot;: 0.038898082702289054, &quot;particle_variance&quot;: 0.03710587652387074, &quot;roots_after&quot;: 2, &quot;roots_without_resampling&quot;: 32, &quot;time&quot;: 1}, {&quot;ess_after&quot;: 32.0, &quot;ess_before&quot;: 30.687719191513075, &quot;ess_without_resampling&quot;: 1.3640635368730263, &quot;exact_variance&quot;: 0.0033320992225101824, &quot;no_resampling_variance&quot;: 0.027877735312512784, &quot;particle_variance&quot;: 0.028141450559530847, &quot;roots_after&quot;: 2, &quot;roots_without_resampling&quot;: 32, &quot;time&quot;: 2}, {&quot;ess_after&quot;: 32.0, &quot;ess_before&quot;: 31.14217056572636, &quot;ess_without_resampling&quot;: 1.2136652659227438, &quot;exact_variance&quot;: 0.0024993057484032216, &quot;no_resampling_variance&quot;: 0.018388652717521128, &quot;particle_variance&quot;: 0.018127435911300033, &quot;roots_after&quot;: 2, &quot;roots_without_resampling&quot;: 32, &quot;time&quot;: 3}, {&quot;ess_after&quot;: 32.0, &quot;ess_before&quot;: 31.471926537408304, &quot;ess_without_resampling&quot;: 1.1234667403172802, &quot;exact_variance&quot;: 0.001999555654299045, &quot;no_resampling_variance&quot;: 0.011479016198131747, &quot;particle_variance&quot;: 0.011042192855947687, &quot;roots_after&quot;: 2, &quot;roots_without_resampling&quot;: 32, &quot;time&quot;: 4}, {&quot;ess_after&quot;: 32.0, &quot;ess_before&quot;: 31.643785286421032, &quot;ess_without_resampling&quot;: 1.0709747031817922, &quot;exact_variance&quot;: 0.0016663580818366975, &quot;no_resampling_variance&quot;: 0.006922122464338232, &quot;particle_variance&quot;: 0.007408115395017342, &quot;roots_after&quot;: 2, &quot;roots_without_resampling&quot;: 32, &quot;time&quot;: 5}, {&quot;ess_after&quot;: 32.0, &quot;ess_before&quot;: 31.819899028260245, &quot;ess_without_resampling&quot;: 1.0407294225815664, &quot;exact_variance&quot;: 0.0014283447071893355, &quot;no_resampling_variance&quot;: 0.0040877594073652915, &quot;particle_variance&quot;: 0.0037247881104599465, &quot;roots_after&quot;: 2, &quot;roots_without_resampling&quot;: 32, &quot;time&quot;: 6}, {&quot;ess_after&quot;: 32.0, &quot;ess_before&quot;: 31.819899028260245, &quot;ess_without_resampling&quot;: 1.023359639951976, &quot;exact_variance&quot;: 0.001249826412998195, &quot;no_resampling_variance&quot;: 0.002384255350484987, &quot;particle_variance&quot;: 0.0037247881104599465, &quot;roots_after&quot;: 2, &quot;roots_without_resampling&quot;: 32, &quot;time&quot;: 7}, {&quot;ess_after&quot;: 32.0, &quot;ess_before&quot;: 31.819899028260245, &quot;ess_without_resampling&quot;: 1.0133950039491428, &quot;exact_variance&quot;: 0.0011109739538328605, &quot;no_resampling_variance&quot;: 0.0013806353639840994, &quot;particle_variance&quot;: 0.0037247881104599465, &quot;roots_after&quot;: 1, &quot;roots_without_resampling&quot;: 32, &quot;time&quot;: 8}, {&quot;ess_after&quot;: 32.0, &quot;ess_before&quot;: 32.0, &quot;ess_without_resampling&quot;: 1.0076805593437193, &quot;exact_variance&quot;: 0.0009998889012331966, &quot;no_resampling_variance&quot;: 0.00079613162389742, &quot;particle_variance&quot;: 0.0, &quot;roots_after&quot;: 1, &quot;roots_without_resampling&quot;: 32, &quot;time&quot;: 9}, {&quot;ess_after&quot;: 32.0, &quot;ess_before&quot;: 32.0, &quot;ess_without_resampling&quot;: 1.0044038657805285, &quot;exact_variance&quot;: 0.0009089990910009092, &quot;no_resampling_variance&quot;: 0.0004579737699657034, &quot;particle_variance&quot;: 0.0, &quot;roots_after&quot;: 1, &quot;roots_without_resampling&quot;: 32, &quot;time&quot;: 10}, {&quot;ess_after&quot;: 32.0, &quot;ess_before&quot;: 32.0, &quot;ess_without_resampling&quot;: 1.0025250641356314, &quot;exact_variance&quot;: 0.0008332561799833351, &quot;no_resampling_variance&quot;: 0.0002630825728885838, &quot;particle_variance&quot;: 0.0, &quot;roots_after&quot;: 1, &quot;roots_without_resampling&quot;: 32, &quot;time&quot;: 11}, {&quot;ess_after&quot;: 32.0, &quot;ess_before&quot;: 32.0, &quot;ess_without_resampling&quot;: 1.0014478041061976, &quot;exact_variance&quot;: 0.0007691650286300318, &quot;no_resampling_variance&quot;: 0.0001510067607675714, &quot;particle_variance&quot;: 0.0, &quot;roots_after&quot;: 1, &quot;roots_without_resampling&quot;: 32, &quot;time&quot;: 12}, {&quot;ess_after&quot;: 32.0, &quot;ess_before&quot;: 32.0, &quot;ess_without_resampling&quot;: 1.000830131478601, &quot;exact_variance&quot;: 0.0007142290294421079, &quot;no_resampling_variance&quot;: 8.663660330498133e-05, &quot;particle_variance&quot;: 0.0, &quot;roots_after&quot;: 1, &quot;roots_without_resampling&quot;: 32, &quot;time&quot;: 13}, {&quot;ess_after&quot;: 32.0, &quot;ess_before&quot;: 32.0, &quot;ess_without_resampling&quot;: 1.0004759746889136, &quot;exact_variance&quot;: 0.0006666172876083254, &quot;no_resampling_variance&quot;: 4.969264354553366e-05, &quot;particle_variance&quot;: 0.0, &quot;roots_after&quot;: 1, &quot;roots_without_resampling&quot;: 32, &quot;time&quot;: 14}, {&quot;ess_after&quot;: 32.0, &quot;ess_before&quot;: 32.0, &quot;ess_without_resampling&quot;: 1.0002729108493538, &quot;exact_variance&quot;: 0.0006249566002360947, &quot;no_resampling_variance&quot;: 2.8498184891549025e-05, &quot;particle_variance&quot;: 0.0, &quot;roots_after&quot;: 1, &quot;roots_without_resampling&quot;: 32, &quot;time&quot;: 15}, {&quot;ess_after&quot;: 32.0, &quot;ess_before&quot;: 32.0, &quot;ess_without_resampling&quot;: 1.000156479601813, &quot;exact_variance&quot;: 0.0005881968498790929, &quot;no_resampling_variance&quot;: 1.634198041327212e-05, &quot;particle_variance&quot;: 0.0, &quot;roots_after&quot;: 1, &quot;roots_without_resampling&quot;: 32, &quot;time&quot;: 16}, {&quot;ess_after&quot;: 32.0, &quot;ess_before&quot;: 32.0, &quot;ess_without_resampling&quot;: 1.0000897211145547, &quot;exact_variance&quot;: 0.0005555212641194989, &quot;no_resampling_variance&quot;: 9.370669107147645e-06, &quot;particle_variance&quot;: 0.0, &quot;roots_after&quot;: 1, &quot;roots_without_resampling&quot;: 32, &quot;time&quot;: 17}, {&quot;ess_after&quot;: 32.0, &quot;ess_before&quot;: 32.0, &quot;ess_without_resampling&quot;: 1.0000514436276775, &quot;exact_variance&quot;: 0.0005262850125723642, &quot;no_resampling_variance&quot;: 5.373090450003375e-06, &quot;particle_variance&quot;: 0.0, &quot;roots_after&quot;: 1, &quot;roots_without_resampling&quot;: 32, &quot;time&quot;: 18}, {&quot;ess_after&quot;: 32.0, &quot;ess_before&quot;: 32.0, &quot;ess_without_resampling&quot;: 1.000029496365926, &quot;exact_variance&quot;: 0.0004999722237653464, &quot;no_resampling_variance&quot;: 3.0808503884392552e-06, &quot;particle_variance&quot;: 0.0, &quot;roots_after&quot;: 1, &quot;roots_without_resampling&quot;: 32, &quot;time&quot;: 19}], &quot;static_final_exact_mean&quot;: 0.0, &quot;static_final_particle_mean&quot;: -0.21636006835521404, &quot;static_settings&quot;: {&quot;a&quot;: 1.0, &quot;ess_fraction&quot;: 1.0, &quot;initial_mean&quot;: 0.0, &quot;initial_std&quot;: 3.0, &quot;observation&quot;: &quot;linear&quot;, &quot;observation_std&quot;: 0.1, &quot;particles&quot;: 32, &quot;process_std&quot;: 0.0, &quot;seed&quot;: 0}}</metadata>
+<rect width="1120" height="1000" fill="white"/>
+<text x="28" y="35" font-family="Arial,sans-serif" font-size="25" font-weight="600" fill="#22283a" text-anchor="start">ParticleLab | full weight ESS is not recovered uncertainty</text>
+<text x="28" y="62" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#22283a" text-anchor="start">Bootstrap particle filter; exact linear-Gaussian reference; fixed development fixtures, not held-out performance.</text>
+<text x="28" y="85" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#22283a" text-anchor="start">Linear: 512 particles, seed 0 shown; all 16 seeds 0..15 retained. Static: 32 particles, seed 0, Q=0, 20 zero observations.</text>
+<text x="75" y="125" font-family="Arial,sans-serif" font-size="17" font-weight="600" fill="#22283a" text-anchor="start">A. Linear filter: moments, not coverage bands</text>
+<path d="M75 385.000H510" stroke="#e0e5ea"/>
+<text x="65" y="389.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="end">-1</text>
+<path d="M75 293.000H510" stroke="#e0e5ea"/>
+<text x="65" y="297.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="end">0</text>
+<path d="M75 201.000H510" stroke="#e0e5ea"/>
+<text x="65" y="205.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="end">1</text>
+<path d="M75 155.000H510" stroke="#e0e5ea"/>
+<text x="65" y="159.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="end">1.5</text>
+<text x="75.0" y="407" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">0</text>
+<text x="312.27272727272725" y="407" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">6</text>
+<text x="510.0" y="407" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">11</text>
+<polygon data-series="exact-sd" points="75.000,239.715 114.545,238.499 154.091,261.062 193.636,241.590 233.182,218.879 272.727,199.489 312.273,224.081 351.818,258.472 391.364,287.702 430.909,291.046 470.455,268.883 510.000,254.456 510.000,320.390 470.455,334.817 430.909,356.980 391.364,353.636 351.818,324.407 312.273,290.017 272.727,265.430 233.182,284.844 193.636,307.684 154.091,327.831 114.545,308.790 75.000,328.968" fill="#13877d" fill-opacity="0.13" stroke="#13877d" stroke-width="0" stroke-dasharray=""/>
+<circle data-series="exact-mean" data-index="0" data-value="0.094117647058823528" cx="75.000" cy="284.341" r="2.5" fill="#13877d"/>
+<circle data-series="exact-mean" data-index="1" data-value="0.21038197845249756" cx="114.545" cy="273.645" r="2.5" fill="#13877d"/>
+<circle data-series="exact-mean" data-index="2" data-value="-0.015724086779158181" cx="154.091" cy="294.447" r="2.5" fill="#13877d"/>
+<circle data-series="exact-mean" data-index="3" data-value="0.19960028083523812" cx="193.636" cy="274.637" r="2.5" fill="#13877d"/>
+<circle data-series="exact-mean" data-index="4" data-value="0.44715972432521489" cx="233.182" cy="251.861" r="2.5" fill="#13877d"/>
+<circle data-series="exact-mean" data-index="5" data-value="0.65804794011896406" cx="272.727" cy="232.460" r="2.5" fill="#13877d"/>
+<circle data-series="exact-mean" data-index="6" data-value="0.39076929844034125" cx="312.273" cy="257.049" r="2.5" fill="#13877d"/>
+<circle data-series="exact-mean" data-index="7" data-value="0.016962873243023868" cx="351.818" cy="291.439" r="2.5" fill="#13877d"/>
+<circle data-series="exact-mean" data-index="8" data-value="-0.30075182418931629" cx="391.364" cy="320.669" r="2.5" fill="#13877d"/>
+<circle data-series="exact-mean" data-index="9" data-value="-0.33710072791093249" cx="430.909" cy="324.013" r="2.5" fill="#13877d"/>
+<circle data-series="exact-mean" data-index="10" data-value="-0.096197996380967793" cx="470.455" cy="301.850" r="2.5" fill="#13877d"/>
+<circle data-series="exact-mean" data-index="11" data-value="0.060616329357695703" cx="510.000" cy="287.423" r="2.5" fill="#13877d"/>
+<polyline data-series="exact-mean" points="75.000,284.341 114.545,273.645 154.091,294.447 193.636,274.637 233.182,251.861 272.727,232.460 312.273,257.049 351.818,291.439 391.364,320.669 430.909,324.013 470.455,301.850 510.000,287.423" fill="none" fill-opacity="1" stroke="#13877d" stroke-width="2" stroke-dasharray=""/>
+<polygon data-series="particle-sd" points="75.000,239.625 114.545,239.492 154.091,261.911 193.636,241.235 233.182,219.465 272.727,202.139 312.273,225.305 351.818,262.679 391.364,290.420 430.909,291.072 470.455,269.332 510.000,254.801 510.000,320.352 470.455,336.108 430.909,357.393 391.364,355.230 351.818,327.404 312.273,291.115 272.727,265.894 233.182,286.967 193.636,310.444 154.091,328.124 114.545,309.234 75.000,329.545" fill="#8264bb" fill-opacity="0.13" stroke="#8264bb" stroke-width="0" stroke-dasharray=""/>
+<circle data-series="particle-mean" data-index="0" data-value="0.091469404297725501" cx="75.000" cy="284.585" r="2.5" fill="#8264bb"/>
+<circle data-series="particle-mean" data-index="1" data-value="0.20257634906652477" cx="114.545" cy="274.363" r="2.5" fill="#8264bb"/>
+<circle data-series="particle-mean" data-index="2" data-value="-0.021930948610856805" cx="154.091" cy="295.018" r="2.5" fill="#8264bb"/>
+<circle data-series="particle-mean" data-index="3" data-value="0.18652822158857174" cx="193.636" cy="275.839" r="2.5" fill="#8264bb"/>
+<circle data-series="particle-mean" data-index="4" data-value="0.43243570825204042" cx="233.182" cy="253.216" r="2.5" fill="#8264bb"/>
+<circle data-series="particle-mean" data-index="5" data-value="0.64112329837425774" cx="272.727" cy="234.017" r="2.5" fill="#8264bb"/>
+<circle data-series="particle-mean" data-index="6" data-value="0.37815254314287028" cx="312.273" cy="258.210" r="2.5" fill="#8264bb"/>
+<circle data-series="particle-mean" data-index="7" data-value="-0.022190263430642461" cx="351.818" cy="295.042" r="2.5" fill="#8264bb"/>
+<circle data-series="particle-mean" data-index="8" data-value="-0.32418350428809345" cx="391.364" cy="322.825" r="2.5" fill="#8264bb"/>
+<circle data-series="particle-mean" data-index="9" data-value="-0.33948274268001621" cx="430.909" cy="324.232" r="2.5" fill="#8264bb"/>
+<circle data-series="particle-mean" data-index="10" data-value="-0.10565122563871178" cx="470.455" cy="302.720" r="2.5" fill="#8264bb"/>
+<circle data-series="particle-mean" data-index="11" data-value="0.058955771926361533" cx="510.000" cy="287.576" r="2.5" fill="#8264bb"/>
+<polyline data-series="particle-mean" points="75.000,284.585 114.545,274.363 154.091,295.018 193.636,275.839 233.182,253.216 272.727,234.017 312.273,258.210 351.818,295.042 391.364,322.825 430.909,324.232 470.455,302.720 510.000,287.576" fill="none" fill-opacity="1" stroke="#8264bb" stroke-width="2" stroke-dasharray=""/>
+<circle data-series="observations" data-index="0" data-value="0.1" cx="75.000" cy="283.800" r="2" fill="#22283a"/>
+<circle data-series="observations" data-index="1" data-value="0.3" cx="114.545" cy="265.400" r="2" fill="#22283a"/>
+<circle data-series="observations" data-index="2" data-value="-0.2" cx="154.091" cy="311.400" r="2" fill="#22283a"/>
+<circle data-series="observations" data-index="3" data-value="0.4" cx="193.636" cy="256.200" r="2" fill="#22283a"/>
+<circle data-series="observations" data-index="4" data-value="0.7" cx="233.182" cy="228.600" r="2" fill="#22283a"/>
+<circle data-series="observations" data-index="5" data-value="0.9" cx="272.727" cy="210.200" r="2" fill="#22283a"/>
+<circle data-series="observations" data-index="6" data-value="0.2" cx="312.273" cy="274.600" r="2" fill="#22283a"/>
+<circle data-series="observations" data-index="7" data-value="-0.3" cx="351.818" cy="320.600" r="2" fill="#22283a"/>
+<circle data-series="observations" data-index="8" data-value="-0.6" cx="391.364" cy="348.200" r="2" fill="#22283a"/>
+<circle data-series="observations" data-index="9" data-value="-0.4" cx="430.909" cy="329.800" r="2" fill="#22283a"/>
+<circle data-series="observations" data-index="10" data-value="0.1" cx="470.455" cy="283.800" r="2" fill="#22283a"/>
+<circle data-series="observations" data-index="11" data-value="0.2" cx="510.000" cy="274.600" r="2" fill="#22283a"/>
+<text x="75" y="430" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#22283a" text-anchor="start">Teal: Kalman. Purple: particle. Black: observations.</text>
+<text x="75" y="451" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#22283a" text-anchor="start">Shading: mean +/- 1 SD, not credible coverage validation.</text>
+<text x="75" y="472" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#22283a" text-anchor="start">Across 16 seeds: mean RMSE 0.01610; variance RMSE 0.00795.</text>
+<text x="625" y="125" font-family="Arial,sans-serif" font-size="17" font-weight="600" fill="#22283a" text-anchor="start">B. Static latent variance: support failure</text>
+<path d="M625 385.000H1060" stroke="#e0e5ea"/>
+<text x="615" y="389.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="end">0</text>
+<path d="M625 270.000H1060" stroke="#e0e5ea"/>
+<text x="615" y="274.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="end">0.03</text>
+<path d="M625 155.000H1060" stroke="#e0e5ea"/>
+<text x="615" y="159.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="end">0.06</text>
+<text x="625.0" y="407" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">0</text>
+<text x="853.9473684210526" y="407" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">10</text>
+<text x="1060.0" y="407" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">19</text>
+<circle data-series="static-exact-var" data-index="0" data-value="0.0099889012208657056" cx="625.000" cy="346.709" r="2.5" fill="#13877d"/>
+<circle data-series="static-exact-var" data-index="1" data-value="0.0049972237645752367" cx="647.895" cy="365.844" r="2.5" fill="#13877d"/>
+<circle data-series="static-exact-var" data-index="2" data-value="0.0033320992225101824" cx="670.789" cy="372.227" r="2.5" fill="#13877d"/>
+<circle data-series="static-exact-var" data-index="3" data-value="0.0024993057484032216" cx="693.684" cy="375.419" r="2.5" fill="#13877d"/>
+<circle data-series="static-exact-var" data-index="4" data-value="0.0019995556542990451" cx="716.579" cy="377.335" r="2.5" fill="#13877d"/>
+<circle data-series="static-exact-var" data-index="5" data-value="0.0016663580818366975" cx="739.474" cy="378.612" r="2.5" fill="#13877d"/>
+<circle data-series="static-exact-var" data-index="6" data-value="0.0014283447071893355" cx="762.368" cy="379.525" r="2.5" fill="#13877d"/>
+<circle data-series="static-exact-var" data-index="7" data-value="0.001249826412998195" cx="785.263" cy="380.209" r="2.5" fill="#13877d"/>
+<circle data-series="static-exact-var" data-index="8" data-value="0.0011109739538328605" cx="808.158" cy="380.741" r="2.5" fill="#13877d"/>
+<circle data-series="static-exact-var" data-index="9" data-value="0.00099988890123319657" cx="831.053" cy="381.167" r="2.5" fill="#13877d"/>
+<circle data-series="static-exact-var" data-index="10" data-value="0.00090899909100090924" cx="853.947" cy="381.516" r="2.5" fill="#13877d"/>
+<circle data-series="static-exact-var" data-index="11" data-value="0.00083325617998333509" cx="876.842" cy="381.806" r="2.5" fill="#13877d"/>
+<circle data-series="static-exact-var" data-index="12" data-value="0.00076916502863003176" cx="899.737" cy="382.052" r="2.5" fill="#13877d"/>
+<circle data-series="static-exact-var" data-index="13" data-value="0.00071422902944210786" cx="922.632" cy="382.262" r="2.5" fill="#13877d"/>
+<circle data-series="static-exact-var" data-index="14" data-value="0.00066661728760832538" cx="945.526" cy="382.445" r="2.5" fill="#13877d"/>
+<circle data-series="static-exact-var" data-index="15" data-value="0.00062495660023609474" cx="968.421" cy="382.604" r="2.5" fill="#13877d"/>
+<circle data-series="static-exact-var" data-index="16" data-value="0.00058819684987909291" cx="991.316" cy="382.745" r="2.5" fill="#13877d"/>
+<circle data-series="static-exact-var" data-index="17" data-value="0.00055552126411949885" cx="1014.211" cy="382.871" r="2.5" fill="#13877d"/>
+<circle data-series="static-exact-var" data-index="18" data-value="0.00052628501257236419" cx="1037.105" cy="382.983" r="2.5" fill="#13877d"/>
+<circle data-series="static-exact-var" data-index="19" data-value="0.00049997222376534642" cx="1060.000" cy="383.083" r="2.5" fill="#13877d"/>
+<polyline data-series="static-exact-var" points="625.000,346.709 647.895,365.844 670.789,372.227 693.684,375.419 716.579,377.335 739.474,378.612 762.368,379.525 785.263,380.209 808.158,380.741 831.053,381.167 853.947,381.516 876.842,381.806 899.737,382.052 922.632,382.262 945.526,382.445 968.421,382.604 991.316,382.745 1014.211,382.871 1037.105,382.983 1060.000,383.083" fill="none" fill-opacity="1" stroke="#13877d" stroke-width="2" stroke-dasharray=""/>
+<circle data-series="static-particle-var" data-index="0" data-value="0.048387025095022122" cx="625.000" cy="199.516" r="2.5" fill="#8264bb"/>
+<circle data-series="static-particle-var" data-index="1" data-value="0.037105876523870741" cx="647.895" cy="242.761" r="2.5" fill="#8264bb"/>
+<circle data-series="static-particle-var" data-index="2" data-value="0.028141450559530847" cx="670.789" cy="277.124" r="2.5" fill="#8264bb"/>
+<circle data-series="static-particle-var" data-index="3" data-value="0.018127435911300033" cx="693.684" cy="315.511" r="2.5" fill="#8264bb"/>
+<circle data-series="static-particle-var" data-index="4" data-value="0.011042192855947687" cx="716.579" cy="342.672" r="2.5" fill="#8264bb"/>
+<circle data-series="static-particle-var" data-index="5" data-value="0.0074081153950173416" cx="739.474" cy="356.602" r="2.5" fill="#8264bb"/>
+<circle data-series="static-particle-var" data-index="6" data-value="0.0037247881104599465" cx="762.368" cy="370.722" r="2.5" fill="#8264bb"/>
+<circle data-series="static-particle-var" data-index="7" data-value="0.0037247881104599465" cx="785.263" cy="370.722" r="2.5" fill="#8264bb"/>
+<circle data-series="static-particle-var" data-index="8" data-value="0.0037247881104599465" cx="808.158" cy="370.722" r="2.5" fill="#8264bb"/>
+<circle data-series="static-particle-var" data-index="9" data-value="0" cx="831.053" cy="385.000" r="2.5" fill="#8264bb"/>
+<circle data-series="static-particle-var" data-index="10" data-value="0" cx="853.947" cy="385.000" r="2.5" fill="#8264bb"/>
+<circle data-series="static-particle-var" data-index="11" data-value="0" cx="876.842" cy="385.000" r="2.5" fill="#8264bb"/>
+<circle data-series="static-particle-var" data-index="12" data-value="0" cx="899.737" cy="385.000" r="2.5" fill="#8264bb"/>
+<circle data-series="static-particle-var" data-index="13" data-value="0" cx="922.632" cy="385.000" r="2.5" fill="#8264bb"/>
+<circle data-series="static-particle-var" data-index="14" data-value="0" cx="945.526" cy="385.000" r="2.5" fill="#8264bb"/>
+<circle data-series="static-particle-var" data-index="15" data-value="0" cx="968.421" cy="385.000" r="2.5" fill="#8264bb"/>
+<circle data-series="static-particle-var" data-index="16" data-value="0" cx="991.316" cy="385.000" r="2.5" fill="#8264bb"/>
+<circle data-series="static-particle-var" data-index="17" data-value="0" cx="1014.211" cy="385.000" r="2.5" fill="#8264bb"/>
+<circle data-series="static-particle-var" data-index="18" data-value="0" cx="1037.105" cy="385.000" r="2.5" fill="#8264bb"/>
+<circle data-series="static-particle-var" data-index="19" data-value="0" cx="1060.000" cy="385.000" r="2.5" fill="#8264bb"/>
+<polyline data-series="static-particle-var" points="625.000,199.516 647.895,242.761 670.789,277.124 693.684,315.511 716.579,342.672 739.474,356.602 762.368,370.722 785.263,370.722 808.158,370.722 831.053,385.000 853.947,385.000 876.842,385.000 899.737,385.000 922.632,385.000 945.526,385.000 968.421,385.000 991.316,385.000 1014.211,385.000 1037.105,385.000 1060.000,385.000" fill="none" fill-opacity="1" stroke="#8264bb" stroke-width="2" stroke-dasharray=""/>
+<circle data-series="static-none-var" data-index="0" data-value="0.048387025095022122" cx="625.000" cy="199.516" r="2.5" fill="#656c7b"/>
+<circle data-series="static-none-var" data-index="1" data-value="0.038898082702289054" cx="647.895" cy="235.891" r="2.5" fill="#656c7b"/>
+<circle data-series="static-none-var" data-index="2" data-value="0.027877735312512784" cx="670.789" cy="278.135" r="2.5" fill="#656c7b"/>
+<circle data-series="static-none-var" data-index="3" data-value="0.018388652717521128" cx="693.684" cy="314.510" r="2.5" fill="#656c7b"/>
+<circle data-series="static-none-var" data-index="4" data-value="0.011479016198131747" cx="716.579" cy="340.997" r="2.5" fill="#656c7b"/>
+<circle data-series="static-none-var" data-index="5" data-value="0.0069221224643382321" cx="739.474" cy="358.465" r="2.5" fill="#656c7b"/>
+<circle data-series="static-none-var" data-index="6" data-value="0.0040877594073652915" cx="762.368" cy="369.330" r="2.5" fill="#656c7b"/>
+<circle data-series="static-none-var" data-index="7" data-value="0.002384255350484987" cx="785.263" cy="375.860" r="2.5" fill="#656c7b"/>
+<circle data-series="static-none-var" data-index="8" data-value="0.0013806353639840994" cx="808.158" cy="379.708" r="2.5" fill="#656c7b"/>
+<circle data-series="static-none-var" data-index="9" data-value="0.00079613162389742" cx="831.053" cy="381.948" r="2.5" fill="#656c7b"/>
+<circle data-series="static-none-var" data-index="10" data-value="0.00045797376996570342" cx="853.947" cy="383.244" r="2.5" fill="#656c7b"/>
+<circle data-series="static-none-var" data-index="11" data-value="0.00026308257288858378" cx="876.842" cy="383.992" r="2.5" fill="#656c7b"/>
+<circle data-series="static-none-var" data-index="12" data-value="0.00015100676076757139" cx="899.737" cy="384.421" r="2.5" fill="#656c7b"/>
+<circle data-series="static-none-var" data-index="13" data-value="8.6636603304981333e-05" cx="922.632" cy="384.668" r="2.5" fill="#656c7b"/>
+<circle data-series="static-none-var" data-index="14" data-value="4.969264354553366e-05" cx="945.526" cy="384.810" r="2.5" fill="#656c7b"/>
+<circle data-series="static-none-var" data-index="15" data-value="2.8498184891549025e-05" cx="968.421" cy="384.891" r="2.5" fill="#656c7b"/>
+<circle data-series="static-none-var" data-index="16" data-value="1.6341980413272121e-05" cx="991.316" cy="384.937" r="2.5" fill="#656c7b"/>
+<circle data-series="static-none-var" data-index="17" data-value="9.3706691071476452e-06" cx="1014.211" cy="384.964" r="2.5" fill="#656c7b"/>
+<circle data-series="static-none-var" data-index="18" data-value="5.3730904500033747e-06" cx="1037.105" cy="384.979" r="2.5" fill="#656c7b"/>
+<circle data-series="static-none-var" data-index="19" data-value="3.0808503884392552e-06" cx="1060.000" cy="384.988" r="2.5" fill="#656c7b"/>
+<polyline data-series="static-none-var" points="625.000,199.516 647.895,235.891 670.789,278.135 693.684,314.510 716.579,340.997 739.474,358.465 762.368,369.330 785.263,375.860 808.158,379.708 831.053,381.948 853.947,383.244 876.842,383.992 899.737,384.421 922.632,384.668 945.526,384.810 968.421,384.891 991.316,384.937 1014.211,384.964 1037.105,384.979 1060.000,384.988" fill="none" fill-opacity="1" stroke="#656c7b" stroke-width="2" stroke-dasharray="5 3"/>
+<text x="625" y="430" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#22283a" text-anchor="start">Teal: exact. Purple: resampling. Gray dashed: none.</text>
+<text x="625" y="451" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#22283a" text-anchor="start">No process noise: missing initial support cannot regrow.</text>
+<text x="625" y="472" font-family="Arial,sans-serif" font-size="13" font-weight="600" fill="#22283a" text-anchor="start">Zero particle variance is not zero posterior uncertainty.</text>
+<text x="75" y="540" font-family="Arial,sans-serif" font-size="17" font-weight="600" fill="#22283a" text-anchor="start">C. Weight ESS, before and after resampling</text>
+<path d="M75 790.000H510" stroke="#e0e5ea"/>
+<text x="65" y="794.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="end">0</text>
+<path d="M75 680.000H510" stroke="#e0e5ea"/>
+<text x="65" y="684.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="end">16</text>
+<path d="M75 570.000H510" stroke="#e0e5ea"/>
+<text x="65" y="574.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="end">32</text>
+<text x="75.0" y="812" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">0</text>
+<text x="303.9473684210526" y="812" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">10</text>
+<text x="510.0" y="812" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">19</text>
+<circle data-series="ess-before" data-index="0" data-value="1.8630357018827151" cx="75.000" cy="777.192" r="2.5" fill="#8264bb"/>
+<circle data-series="ess-before" data-index="1" data-value="30.292005720738434" cx="97.895" cy="581.742" r="2.5" fill="#8264bb"/>
+<circle data-series="ess-before" data-index="2" data-value="30.687719191513075" cx="120.789" cy="579.022" r="2.5" fill="#8264bb"/>
+<circle data-series="ess-before" data-index="3" data-value="31.14217056572636" cx="143.684" cy="575.898" r="2.5" fill="#8264bb"/>
+<circle data-series="ess-before" data-index="4" data-value="31.471926537408304" cx="166.579" cy="573.631" r="2.5" fill="#8264bb"/>
+<circle data-series="ess-before" data-index="5" data-value="31.643785286421032" cx="189.474" cy="572.449" r="2.5" fill="#8264bb"/>
+<circle data-series="ess-before" data-index="6" data-value="31.819899028260245" cx="212.368" cy="571.238" r="2.5" fill="#8264bb"/>
+<circle data-series="ess-before" data-index="7" data-value="31.819899028260245" cx="235.263" cy="571.238" r="2.5" fill="#8264bb"/>
+<circle data-series="ess-before" data-index="8" data-value="31.819899028260245" cx="258.158" cy="571.238" r="2.5" fill="#8264bb"/>
+<circle data-series="ess-before" data-index="9" data-value="32" cx="281.053" cy="570.000" r="2.5" fill="#8264bb"/>
+<circle data-series="ess-before" data-index="10" data-value="32" cx="303.947" cy="570.000" r="2.5" fill="#8264bb"/>
+<circle data-series="ess-before" data-index="11" data-value="32" cx="326.842" cy="570.000" r="2.5" fill="#8264bb"/>
+<circle data-series="ess-before" data-index="12" data-value="32" cx="349.737" cy="570.000" r="2.5" fill="#8264bb"/>
+<circle data-series="ess-before" data-index="13" data-value="32" cx="372.632" cy="570.000" r="2.5" fill="#8264bb"/>
+<circle data-series="ess-before" data-index="14" data-value="32" cx="395.526" cy="570.000" r="2.5" fill="#8264bb"/>
+<circle data-series="ess-before" data-index="15" data-value="32" cx="418.421" cy="570.000" r="2.5" fill="#8264bb"/>
+<circle data-series="ess-before" data-index="16" data-value="32" cx="441.316" cy="570.000" r="2.5" fill="#8264bb"/>
+<circle data-series="ess-before" data-index="17" data-value="32" cx="464.211" cy="570.000" r="2.5" fill="#8264bb"/>
+<circle data-series="ess-before" data-index="18" data-value="32" cx="487.105" cy="570.000" r="2.5" fill="#8264bb"/>
+<circle data-series="ess-before" data-index="19" data-value="32" cx="510.000" cy="570.000" r="2.5" fill="#8264bb"/>
+<polyline data-series="ess-before" points="75.000,777.192 97.895,581.742 120.789,579.022 143.684,575.898 166.579,573.631 189.474,572.449 212.368,571.238 235.263,571.238 258.158,571.238 281.053,570.000 303.947,570.000 326.842,570.000 349.737,570.000 372.632,570.000 395.526,570.000 418.421,570.000 441.316,570.000 464.211,570.000 487.105,570.000 510.000,570.000" fill="none" fill-opacity="1" stroke="#8264bb" stroke-width="2" stroke-dasharray=""/>
+<circle data-series="ess-after" data-index="0" data-value="32" cx="75.000" cy="570.000" r="2.5" fill="#13877d"/>
+<circle data-series="ess-after" data-index="1" data-value="32" cx="97.895" cy="570.000" r="2.5" fill="#13877d"/>
+<circle data-series="ess-after" data-index="2" data-value="32" cx="120.789" cy="570.000" r="2.5" fill="#13877d"/>
+<circle data-series="ess-after" data-index="3" data-value="32" cx="143.684" cy="570.000" r="2.5" fill="#13877d"/>
+<circle data-series="ess-after" data-index="4" data-value="32" cx="166.579" cy="570.000" r="2.5" fill="#13877d"/>
+<circle data-series="ess-after" data-index="5" data-value="32" cx="189.474" cy="570.000" r="2.5" fill="#13877d"/>
+<circle data-series="ess-after" data-index="6" data-value="32" cx="212.368" cy="570.000" r="2.5" fill="#13877d"/>
+<circle data-series="ess-after" data-index="7" data-value="32" cx="235.263" cy="570.000" r="2.5" fill="#13877d"/>
+<circle data-series="ess-after" data-index="8" data-value="32" cx="258.158" cy="570.000" r="2.5" fill="#13877d"/>
+<circle data-series="ess-after" data-index="9" data-value="32" cx="281.053" cy="570.000" r="2.5" fill="#13877d"/>
+<circle data-series="ess-after" data-index="10" data-value="32" cx="303.947" cy="570.000" r="2.5" fill="#13877d"/>
+<circle data-series="ess-after" data-index="11" data-value="32" cx="326.842" cy="570.000" r="2.5" fill="#13877d"/>
+<circle data-series="ess-after" data-index="12" data-value="32" cx="349.737" cy="570.000" r="2.5" fill="#13877d"/>
+<circle data-series="ess-after" data-index="13" data-value="32" cx="372.632" cy="570.000" r="2.5" fill="#13877d"/>
+<circle data-series="ess-after" data-index="14" data-value="32" cx="395.526" cy="570.000" r="2.5" fill="#13877d"/>
+<circle data-series="ess-after" data-index="15" data-value="32" cx="418.421" cy="570.000" r="2.5" fill="#13877d"/>
+<circle data-series="ess-after" data-index="16" data-value="32" cx="441.316" cy="570.000" r="2.5" fill="#13877d"/>
+<circle data-series="ess-after" data-index="17" data-value="32" cx="464.211" cy="570.000" r="2.5" fill="#13877d"/>
+<circle data-series="ess-after" data-index="18" data-value="32" cx="487.105" cy="570.000" r="2.5" fill="#13877d"/>
+<circle data-series="ess-after" data-index="19" data-value="32" cx="510.000" cy="570.000" r="2.5" fill="#13877d"/>
+<polyline data-series="ess-after" points="75.000,570.000 97.895,570.000 120.789,570.000 143.684,570.000 166.579,570.000 189.474,570.000 212.368,570.000 235.263,570.000 258.158,570.000 281.053,570.000 303.947,570.000 326.842,570.000 349.737,570.000 372.632,570.000 395.526,570.000 418.421,570.000 441.316,570.000 464.211,570.000 487.105,570.000 510.000,570.000" fill="none" fill-opacity="1" stroke="#13877d" stroke-width="2" stroke-dasharray="5 3"/>
+<circle data-series="ess-none" data-index="0" data-value="1.8630357018827151" cx="75.000" cy="777.192" r="2.5" fill="#656c7b"/>
+<circle data-series="ess-none" data-index="1" data-value="1.5933794480004646" cx="97.895" cy="779.046" r="2.5" fill="#656c7b"/>
+<circle data-series="ess-none" data-index="2" data-value="1.3640635368730263" cx="120.789" cy="780.622" r="2.5" fill="#656c7b"/>
+<circle data-series="ess-none" data-index="3" data-value="1.2136652659227438" cx="143.684" cy="781.656" r="2.5" fill="#656c7b"/>
+<circle data-series="ess-none" data-index="4" data-value="1.1234667403172802" cx="166.579" cy="782.276" r="2.5" fill="#656c7b"/>
+<circle data-series="ess-none" data-index="5" data-value="1.0709747031817922" cx="189.474" cy="782.637" r="2.5" fill="#656c7b"/>
+<circle data-series="ess-none" data-index="6" data-value="1.0407294225815664" cx="212.368" cy="782.845" r="2.5" fill="#656c7b"/>
+<circle data-series="ess-none" data-index="7" data-value="1.023359639951976" cx="235.263" cy="782.964" r="2.5" fill="#656c7b"/>
+<circle data-series="ess-none" data-index="8" data-value="1.0133950039491428" cx="258.158" cy="783.033" r="2.5" fill="#656c7b"/>
+<circle data-series="ess-none" data-index="9" data-value="1.0076805593437193" cx="281.053" cy="783.072" r="2.5" fill="#656c7b"/>
+<circle data-series="ess-none" data-index="10" data-value="1.0044038657805285" cx="303.947" cy="783.095" r="2.5" fill="#656c7b"/>
+<circle data-series="ess-none" data-index="11" data-value="1.0025250641356314" cx="326.842" cy="783.108" r="2.5" fill="#656c7b"/>
+<circle data-series="ess-none" data-index="12" data-value="1.0014478041061976" cx="349.737" cy="783.115" r="2.5" fill="#656c7b"/>
+<circle data-series="ess-none" data-index="13" data-value="1.000830131478601" cx="372.632" cy="783.119" r="2.5" fill="#656c7b"/>
+<circle data-series="ess-none" data-index="14" data-value="1.0004759746889136" cx="395.526" cy="783.122" r="2.5" fill="#656c7b"/>
+<circle data-series="ess-none" data-index="15" data-value="1.0002729108493538" cx="418.421" cy="783.123" r="2.5" fill="#656c7b"/>
+<circle data-series="ess-none" data-index="16" data-value="1.000156479601813" cx="441.316" cy="783.124" r="2.5" fill="#656c7b"/>
+<circle data-series="ess-none" data-index="17" data-value="1.0000897211145547" cx="464.211" cy="783.124" r="2.5" fill="#656c7b"/>
+<circle data-series="ess-none" data-index="18" data-value="1.0000514436276775" cx="487.105" cy="783.125" r="2.5" fill="#656c7b"/>
+<circle data-series="ess-none" data-index="19" data-value="1.000029496365926" cx="510.000" cy="783.125" r="2.5" fill="#656c7b"/>
+<polyline data-series="ess-none" points="75.000,777.192 97.895,779.046 120.789,780.622 143.684,781.656 166.579,782.276 189.474,782.637 212.368,782.845 235.263,782.964 258.158,783.033 281.053,783.072 303.947,783.095 326.842,783.108 349.737,783.115 372.632,783.119 395.526,783.122 418.421,783.123 441.316,783.124 464.211,783.124 487.105,783.125 510.000,783.125" fill="none" fill-opacity="1" stroke="#656c7b" stroke-width="2" stroke-dasharray="2 3"/>
+<text x="75" y="835" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#22283a" text-anchor="start">Purple: before. Teal dashed: carried equal weights.</text>
+<text x="75" y="856" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#22283a" text-anchor="start">Gray dotted: without resampling. N=32 on shared scale.</text>
+<text x="625" y="540" font-family="Arial,sans-serif" font-size="17" font-weight="600" fill="#22283a" text-anchor="start">D. Surviving initial particle labels</text>
+<path d="M625 790.000H1060" stroke="#e0e5ea"/>
+<text x="615" y="794.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="end">0</text>
+<path d="M625 680.000H1060" stroke="#e0e5ea"/>
+<text x="615" y="684.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="end">16</text>
+<path d="M625 570.000H1060" stroke="#e0e5ea"/>
+<text x="615" y="574.0" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="end">32</text>
+<text x="625.0" y="812" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">0</text>
+<text x="853.9473684210526" y="812" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">10</text>
+<text x="1060.0" y="812" font-family="Arial,sans-serif" font-size="12" font-weight="400" fill="#22283a" text-anchor="middle">19</text>
+<circle data-series="roots-after" data-index="0" data-value="2" cx="625.000" cy="776.250" r="2.5" fill="#8264bb"/>
+<circle data-series="roots-after" data-index="1" data-value="2" cx="647.895" cy="776.250" r="2.5" fill="#8264bb"/>
+<circle data-series="roots-after" data-index="2" data-value="2" cx="670.789" cy="776.250" r="2.5" fill="#8264bb"/>
+<circle data-series="roots-after" data-index="3" data-value="2" cx="693.684" cy="776.250" r="2.5" fill="#8264bb"/>
+<circle data-series="roots-after" data-index="4" data-value="2" cx="716.579" cy="776.250" r="2.5" fill="#8264bb"/>
+<circle data-series="roots-after" data-index="5" data-value="2" cx="739.474" cy="776.250" r="2.5" fill="#8264bb"/>
+<circle data-series="roots-after" data-index="6" data-value="2" cx="762.368" cy="776.250" r="2.5" fill="#8264bb"/>
+<circle data-series="roots-after" data-index="7" data-value="2" cx="785.263" cy="776.250" r="2.5" fill="#8264bb"/>
+<circle data-series="roots-after" data-index="8" data-value="1" cx="808.158" cy="783.125" r="2.5" fill="#8264bb"/>
+<circle data-series="roots-after" data-index="9" data-value="1" cx="831.053" cy="783.125" r="2.5" fill="#8264bb"/>
+<circle data-series="roots-after" data-index="10" data-value="1" cx="853.947" cy="783.125" r="2.5" fill="#8264bb"/>
+<circle data-series="roots-after" data-index="11" data-value="1" cx="876.842" cy="783.125" r="2.5" fill="#8264bb"/>
+<circle data-series="roots-after" data-index="12" data-value="1" cx="899.737" cy="783.125" r="2.5" fill="#8264bb"/>
+<circle data-series="roots-after" data-index="13" data-value="1" cx="922.632" cy="783.125" r="2.5" fill="#8264bb"/>
+<circle data-series="roots-after" data-index="14" data-value="1" cx="945.526" cy="783.125" r="2.5" fill="#8264bb"/>
+<circle data-series="roots-after" data-index="15" data-value="1" cx="968.421" cy="783.125" r="2.5" fill="#8264bb"/>
+<circle data-series="roots-after" data-index="16" data-value="1" cx="991.316" cy="783.125" r="2.5" fill="#8264bb"/>
+<circle data-series="roots-after" data-index="17" data-value="1" cx="1014.211" cy="783.125" r="2.5" fill="#8264bb"/>
+<circle data-series="roots-after" data-index="18" data-value="1" cx="1037.105" cy="783.125" r="2.5" fill="#8264bb"/>
+<circle data-series="roots-after" data-index="19" data-value="1" cx="1060.000" cy="783.125" r="2.5" fill="#8264bb"/>
+<polyline data-series="roots-after" points="625.000,776.250 647.895,776.250 670.789,776.250 693.684,776.250 716.579,776.250 739.474,776.250 762.368,776.250 785.263,776.250 808.158,783.125 831.053,783.125 853.947,783.125 876.842,783.125 899.737,783.125 922.632,783.125 945.526,783.125 968.421,783.125 991.316,783.125 1014.211,783.125 1037.105,783.125 1060.000,783.125" fill="none" fill-opacity="1" stroke="#8264bb" stroke-width="2" stroke-dasharray=""/>
+<circle data-series="roots-none" data-index="0" data-value="32" cx="625.000" cy="570.000" r="2.5" fill="#656c7b"/>
+<circle data-series="roots-none" data-index="1" data-value="32" cx="647.895" cy="570.000" r="2.5" fill="#656c7b"/>
+<circle data-series="roots-none" data-index="2" data-value="32" cx="670.789" cy="570.000" r="2.5" fill="#656c7b"/>
+<circle data-series="roots-none" data-index="3" data-value="32" cx="693.684" cy="570.000" r="2.5" fill="#656c7b"/>
+<circle data-series="roots-none" data-index="4" data-value="32" cx="716.579" cy="570.000" r="2.5" fill="#656c7b"/>
+<circle data-series="roots-none" data-index="5" data-value="32" cx="739.474" cy="570.000" r="2.5" fill="#656c7b"/>
+<circle data-series="roots-none" data-index="6" data-value="32" cx="762.368" cy="570.000" r="2.5" fill="#656c7b"/>
+<circle data-series="roots-none" data-index="7" data-value="32" cx="785.263" cy="570.000" r="2.5" fill="#656c7b"/>
+<circle data-series="roots-none" data-index="8" data-value="32" cx="808.158" cy="570.000" r="2.5" fill="#656c7b"/>
+<circle data-series="roots-none" data-index="9" data-value="32" cx="831.053" cy="570.000" r="2.5" fill="#656c7b"/>
+<circle data-series="roots-none" data-index="10" data-value="32" cx="853.947" cy="570.000" r="2.5" fill="#656c7b"/>
+<circle data-series="roots-none" data-index="11" data-value="32" cx="876.842" cy="570.000" r="2.5" fill="#656c7b"/>
+<circle data-series="roots-none" data-index="12" data-value="32" cx="899.737" cy="570.000" r="2.5" fill="#656c7b"/>
+<circle data-series="roots-none" data-index="13" data-value="32" cx="922.632" cy="570.000" r="2.5" fill="#656c7b"/>
+<circle data-series="roots-none" data-index="14" data-value="32" cx="945.526" cy="570.000" r="2.5" fill="#656c7b"/>
+<circle data-series="roots-none" data-index="15" data-value="32" cx="968.421" cy="570.000" r="2.5" fill="#656c7b"/>
+<circle data-series="roots-none" data-index="16" data-value="32" cx="991.316" cy="570.000" r="2.5" fill="#656c7b"/>
+<circle data-series="roots-none" data-index="17" data-value="32" cx="1014.211" cy="570.000" r="2.5" fill="#656c7b"/>
+<circle data-series="roots-none" data-index="18" data-value="32" cx="1037.105" cy="570.000" r="2.5" fill="#656c7b"/>
+<circle data-series="roots-none" data-index="19" data-value="32" cx="1060.000" cy="570.000" r="2.5" fill="#656c7b"/>
+<polyline data-series="roots-none" points="625.000,570.000 647.895,570.000 670.789,570.000 693.684,570.000 716.579,570.000 739.474,570.000 762.368,570.000 785.263,570.000 808.158,570.000 831.053,570.000 853.947,570.000 876.842,570.000 899.737,570.000 922.632,570.000 945.526,570.000 968.421,570.000 991.316,570.000 1014.211,570.000 1037.105,570.000 1060.000,570.000" fill="none" fill-opacity="1" stroke="#656c7b" stroke-width="2" stroke-dasharray="5 3"/>
+<text x="625" y="835" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#22283a" text-anchor="start">Purple: resampling. Gray dashed: without resampling.</text>
+<text x="625" y="856" font-family="Arial,sans-serif" font-size="13" font-weight="400" fill="#22283a" text-anchor="start">Label count is ancestry, not effective present-state support.</text>
+<text x="28" y="906" font-family="Arial,sans-serif" font-size="16" font-weight="600" fill="#22283a" text-anchor="start">Static final: ESS 32, one initial ancestor, particle variance 0; exact variance 0.000499972.</text>
+<text x="28" y="931" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#22283a" text-anchor="start">Particle mean -0.216360 versus exact 0. Both resampling/no-resampling inherit poor finite support.</text>
+<text x="28" y="955" font-family="Arial,sans-serif" font-size="14" font-weight="400" fill="#22283a" text-anchor="start">Time index on all x axes. All plotted values and domains retained in SVG metadata. Finite RNG; no real-data claim.</text>
+</svg>
