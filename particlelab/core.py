@@ -57,6 +57,13 @@ def moments(states,weights):
     return mean,math.fsum(w*(x-mean)**2 for x,w in zip(states,weights))
 
 
+def sign_mass(states,weights):
+    """Weighted probability on either side of zero, including any atom at0."""
+    return {'negative_probability':math.fsum(w for x,w in zip(states,weights) if x<0),
+            'zero_probability':math.fsum(w for x,w in zip(states,weights) if x==0),
+            'positive_probability':math.fsum(w for x,w in zip(states,weights) if x>0)}
+
+
 def filter_particles(data,particles=256,seed=0,a=.9,process_std=.4,observation_std=.5,
                      initial_mean=0.,initial_std=2.,ess_fraction=.5,observation='linear'):
     y,a,q,r,mu,tau=model(data,a,process_std,observation_std,initial_mean,initial_std)
@@ -85,15 +92,15 @@ def filter_particles(data,particles=256,seed=0,a=.9,process_std=.4,observation_s
         post_mean,post_variance=moments(states,weights)
         history.append({'time':t,'observation':value,'filtered_particles':filtered_states,'filtered_weights':filtered_weights,
                         'incoming_weights':prior_weights,'incoming_log_weights':prior_logs[:],'filtered_log_weights':log_weights[:],'filtered_root_ids':filtered_roots,'mean':mean,'variance':variance,
-                        'ess_before_resampling':ess,'resampled':resampled,'parent_indices':parents,
+                        'filtered_sign_mass':sign_mass(filtered_states,filtered_weights),'ess_before_resampling':ess,'resampled':resampled,'parent_indices':parents,
                         'carried_particles':states[:],'carried_weights':weights[:],'carried_root_ids':roots[:],
-                        'carried_mean':post_mean,'carried_variance':post_variance,'ess_after_resampling':1/math.fsum(w*w for w in weights),
+                        'carried_sign_mass':sign_mass(states,weights),'carried_mean':post_mean,'carried_variance':post_variance,'ess_after_resampling':1/math.fsum(w*w for w in weights),
                         'unique_initial_ancestors':len(set(roots)),'distinct_carried_states':len(set(states)),
                         'log_evidence_increment':increment,'cumulative_log_evidence':log_evidence})
     return {'settings':{'particles':count,'seed':seed,'a':a,'process_std':q,'observation_std':r,'initial_mean':mu,
                         'initial_std':tau,'ess_fraction':threshold,'observation':observation},'data':y,
             'history':history,'log_evidence_estimate':log_evidence,
-            'semantics':'scalar bootstrap particle approximation; x0 from initial Normal, xt=a*x(t-1)+independent Normal(0,q²) for t>0; y given x is Normal(h(x),r²), h linear identity or square; transition proposal, optional systematic resampling when ESS<N*fraction (strict); summaries before resampling, carried summaries after; ancestry counts trace initial particle labels, not distinct present values; ESS measures weight concentration, not convergence, calibration or accuracy; finite local RNG and floating point; likelihood estimate random, log estimate not unbiased; no smoothing, parameter fitting or real-data guarantee'}
+            'semantics':'scalar bootstrap particle approximation; x0 from initial Normal, xt=a*x(t-1)+independent Normal(0,q²) for t>0; y given x is Normal(h(x),r²), h linear identity or square; transition proposal, optional systematic resampling when ESS<N*fraction (strict); summaries before resampling, carried summaries after; ancestry counts trace initial particle labels, not distinct present values; sign masses are weighted latent-state probabilities below/at/above0 before and after resampling, not event confidence; ESS measures weight concentration, not convergence, calibration or accuracy; finite local RNG and floating point; likelihood estimate random, log estimate not unbiased; no smoothing, parameter fitting or real-data guarantee'}
 
 
 def kalman(data,a=.9,process_std=.4,observation_std=.5,initial_mean=0.,initial_std=2.):
