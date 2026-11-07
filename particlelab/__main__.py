@@ -10,11 +10,11 @@ FIELDS={'data','a','process_std','observation_std','initial_mean','initial_std'}
 
 
 def main():
-    parser=argparse.ArgumentParser(prog='particlelab',description='Auditable scalar bootstrap filtering, retained-path smoothing and restricted analytic references')
+    parser=argparse.ArgumentParser(prog='particlelab',description='Auditable scalar particle filtering, retained-path smoothing and restricted analytic references')
     commands=parser.add_subparsers(dest='command',required=True)
     commands.add_parser('demo',help='run fixed linear reference and static-support failure audits')
     for name in ['filter','kalman','square-reference','smooth','rts','backward']:
-        command=commands.add_parser(name,help='bounded backward-simulation smoother, process_std>=1e-4' if name=='backward' else ('terminal-weighted retained genealogy smoother' if name=='smooth' else 'exact scalar linear fixed-interval smoother') if name in ('smooth','rts') else 'finite-particle bootstrap filter' if name=='filter' else ('exact linear identity-observation reference' if name=='kalman' else 'restricted static symmetric square-observation reference'))
+        command=commands.add_parser(name,help='bounded backward-simulation smoother, process_std>=1e-4' if name=='backward' else ('terminal-weighted retained genealogy smoother' if name=='smooth' else 'exact scalar linear fixed-interval smoother') if name in ('smooth','rts') else 'finite-particle filter with bootstrap or linear conditional proposals' if name=='filter' else ('exact linear identity-observation reference' if name=='kalman' else 'restricted static symmetric square-observation reference'))
         command.add_argument('input',help='strict JSON object with exactly: '+', '.join(sorted(FIELDS)))
         if name in ('filter','smooth','backward'):
             command.add_argument('--particles',type=int,default=256,help='1..4096, particles*T<=65536 (default:256)')
