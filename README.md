@@ -40,11 +40,11 @@ Every model command reads exactly these six JSON fields:
 - Initial x₀ ~ Normal(initial_mean, initial_std²). The first observation updates this distribution directly: **there is no initial transition**.
 - For t>0, `xₜ = a*xₜ₋₁ + Normal(0, process_std²)`, with independent process noise. Process std may be zero.
 - yₜ | xₜ ~ Normal(h(xₜ), observation_std²), with supplied fixed noise. h is identity or square.
-- The transition is the proposal. Weight each propagated particle by its observation likelihood and incoming normalized weight. The log normalizer is the next evidence increment.
+- For the default bootstrap method, the transition is the proposal. Weight each propagated particle by its observation likelihood and incoming normalized weight. The log normalizer is the next evidence increment.
 - Normalize in log space. Retain finite normalized log weights across skipped resampling even if their stored probabilities underflow to zero. A later observation can revive such a particle's relative mass.
 - If weight `ESS < N*ess_fraction`, resample with one systematic offset and reset carried weights to 1/N. The inequality is strict; fraction 0 disables resampling. Finite rounding can matter near the threshold.
 
-The base `filter` command targets p(xₜ | y₀:ₜ), not smoothing p(xₜ | y₀:T). The separate `smooth` command reconstructs terminal-weighted retained paths; `rts` supplies an exact scalar linear-Gaussian smoothing reference. Neither learns parameters, proposes guided particles, rejuvenates states or corrects an observation model.
+The `filter` command targets p(xₜ | y₀:ₜ), not smoothing p(xₜ | y₀:T). The separate `smooth` command reconstructs terminal-weighted retained paths; `rts` supplies an exact scalar linear-Gaussian smoothing reference. Neither learns parameters, rejuvenates states or corrects an observation model. The separate linear conditional proposal below guides new particles using the current observation.
 
 ## Inspect the output, not one score
 
@@ -118,9 +118,19 @@ On the unchanged 64-step fixture, 512 backward draws reach two initial indices i
 python -m particlelab backward examples/sequence.json --particles 32 --draws 512 --draw-seed 0
 ```
 
+## Observation-conditioned proposals still need an audit
+
+`filter --proposal conditional` draws from the scalar linear observation-conditioned Gaussian and corrects with predictive weights. The first observation conditions the initial distribution directly; q=0 gives deterministic later moves without fake noise. Bootstrap remains the default; square observations are rejected for the new proposal.
+
+Across all sixteen fixed seeds at N=32 on the inherited twelve observations, mean RMSE is .082871/.081548 (bootstrap/conditional), but conditional variance RMSE is worse: .037895 versus .035944. An informative-observation example has smaller conditional errors, not a uniform or causal method ranking. Equal seed labels do not imply identical paired random streams. [Derivation, complete metrics, all-seed figure, numerical guards and limits](PROPOSAL.md).
+
+```sh
+python -m particlelab filter examples/sequence.json --particles 32 --proposal conditional
+```
+
 ## Validation and bounds
 
-**92 tests** cover one-step hand weights/moments/evidence, no-resampling evidence against full products over the initial sample, recovery of relative log mass after probability underflow, exact resampling boundary/zero-bin/offspring audits, RNG isolation, parent/root mappings, state-diversity versus ancestry, closed-form Gaussian/static-sequence references, extreme precision, strict CLI payloads, both success/failure demo checks and all plotted coordinates/values/SD polygon vertices. Static-square symmetry/modes, direct log-joint density ratios, sign-mass traces, dense joint-Gaussian smoothing references, forward path-copy equivalence and the finite backward-kernel law and all four SVGs are also checked. The expected-offspring test integrates a fixed rational-weight fixture over a systematic-offset grid; it is not a proof for all floats. CI runs Python 3.10..3.13 plus the demo and byte-identical SVG check.
+**114 tests** cover one-step hand weights/moments/evidence, no-resampling evidence against full products over the initial sample, recovery of relative log mass after probability underflow, exact resampling boundary/zero-bin/offspring audits, RNG isolation, parent/root mappings, state-diversity versus ancestry, closed-form Gaussian/static-sequence references, extreme precision, strict CLI payloads, both success/failure demo checks and all plotted coordinates/values/SD polygon vertices. Static-square symmetry/modes, direct log-joint density ratios, sign-mass traces, dense joint-Gaussian smoothing references, forward path-copy equivalence, the finite backward-kernel law, conditional Gaussian proposals/predictive weights and all five SVGs are also checked. The expected-offspring test integrates a fixed rational-weight fixture over a systematic-offset grid; it is not a proof for all floats. CI runs Python 3.10..3.13 plus the demo and byte-identical SVG check.
 
 Inputs: 1..80 finite observations in [-1e4,1e4]; a in [-1,1]; process std in [0,100]; observation/initial std in [1e-4,100]; initial mean in [-1e4,1e4]. Particles: integer 1..4096; `N*T <= 65536`. Seed: integer `0..2**32-1`. ESS fraction: [0,1]. Booleans are rejected as numbers. Full history uses `O(T*N)` time/output/memory, including `O(N)` systematic resampling, plus `O(T)` for the Kalman/RTS references. Retrospective reconstruction adds `O(T*N)` time/memory and returned full trajectories. The demo runs sixteen additional particle filters. All quantities use floating point and a finite local RNG. Tiny weights can underflow; finite logs survive only before resampling. Random draws are reproducible in the tested environment, not a cross-language bitstream contract.
 
