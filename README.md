@@ -33,7 +33,7 @@ Every model command reads exactly these six JSON fields:
 }
 ```
 
-`filter` also accepts `--observation square`, meaning h(x)=x² rather than x. `kalman` is only the linear identity-observation reference. The supplied linear fixture is not a square-model validation study. `demo` needs no file. Output is JSON; invalid inputs exit 2 with a prefixed stderr error and no traceback. Python APIs are `filter_particles`, `kalman` and `systematic_resample` from `particlelab`.
+`filter` also accepts `--observation square`, meaning h(x)=x² rather than x. `kalman` is only the linear identity-observation reference. `square-reference` provides restricted static symmetry/mode checks from `examples/square.json`; it rejects a!=1, process_std!=0 or initial_mean!=0. This is not a dynamic nonlinear tracking reference. `demo` needs no file. Output is JSON; invalid inputs exit 2 with a prefixed stderr error and no traceback. Python APIs are `filter_particles`, `kalman` and `systematic_resample` from `particlelab`.
 
 ## Explicit model and timing
 
@@ -77,13 +77,27 @@ The no-resampling run retains all initial labels but almost all weight sits on o
 
 The four-panel SVG shows all 12 linear and all 20 static points, with fixed numeric domains. Its shaded mean +/- one-standard-deviation summaries are not coverage bands. All plotted values, model settings, seed errors and domains are embedded in SVG metadata. Regeneration fails on changed fixtures or out-of-domain data instead of clipping it silently.
 
+## A correct mean can sit between two modes
+
+The static square-observation model has exact mean 0 and positive/negative sign mass 1/2. With twelve observations y=4, its modes are near +/-2 while log density at the mean is 1066.17 nats below either mode. An eight-particle selected run loses positive-sign support yet ends with full carried weight ESS. The no-resampling comparison is also far from the exact sign mass; a larger fixed-seed run is an approximation, not a budget recommendation.
+
+![Static square-model symmetry and sign loss](assets/square-symmetry.svg)
+
+`filter` now retains filtered/carried negative/zero/positive sign masses. `square-reference` reports analytic symmetry and modes only, not variance, evidence or a dynamic nonlinear benchmark. [Derivation, strict assumptions, complete selected results and limits](SYMMETRY.md).
+
+```sh
+python -m particlelab square-reference examples/square.json
+python examples/square_audit.py > /tmp/square-audit.json
+python examples/render_square.py /tmp/square-audit.json --check
+```
+
 ## Validation and bounds
 
-**38 tests** cover one-step hand weights/moments/evidence, no-resampling evidence against full products over the initial sample, recovery of relative log mass after probability underflow, exact resampling boundary/zero-bin/offspring audits, RNG isolation, parent/root mappings, state-diversity versus ancestry, closed-form Gaussian/static-sequence references, extreme precision, strict CLI payloads, both success/failure demo checks and all plotted coordinates/values/SD polygon vertices. The expected-offspring test integrates a fixed rational-weight fixture over a systematic-offset grid; it is not a proof for all floats. CI runs Python 3.10..3.13 plus the demo and byte-identical SVG check.
+**54 tests** cover one-step hand weights/moments/evidence, no-resampling evidence against full products over the initial sample, recovery of relative log mass after probability underflow, exact resampling boundary/zero-bin/offspring audits, RNG isolation, parent/root mappings, state-diversity versus ancestry, closed-form Gaussian/static-sequence references, extreme precision, strict CLI payloads, both success/failure demo checks and all plotted coordinates/values/SD polygon vertices. Static-square symmetry/modes, direct log-joint density ratios, sign-mass traces and the second SVG are also checked. The expected-offspring test integrates a fixed rational-weight fixture over a systematic-offset grid; it is not a proof for all floats. CI runs Python 3.10..3.13 plus the demo and byte-identical SVG check.
 
 Inputs: 1..80 finite observations in [-1e4,1e4]; a in [-1,1]; process std in [0,100]; observation/initial std in [1e-4,100]; initial mean in [-1e4,1e4]. Particles: integer 1..4096; `N*T <= 65536`. Seed: integer `0..2**32-1`. ESS fraction: [0,1]. Booleans are rejected as numbers. Full history uses `O(T*N)` time/output/memory, including `O(N)` systematic resampling, plus `O(T)` for the Kalman reference. The demo runs sixteen additional particle filters. All quantities use floating point and a finite local RNG. Tiny weights can underflow; finite logs survive only before resampling. Random draws are reproducible in the tested environment, not a cross-language bitstream contract.
 
-The square observation branch has hand-checked even-likelihood and propagation tests, not a nonlinear tracking benchmark. There is no smoothing, parameter learning, high-dimensional proposal, robustness claim, convergence certificate, anomaly test, real-world accuracy or coverage guarantee. No external service receives the local input.
+The square branch has an analytic static symmetry/mode reference and selected support-loss fixtures, not a dynamic nonlinear tracking benchmark. There is no smoothing, parameter learning, high-dimensional proposal, robustness claim, convergence certificate, anomaly test, real-world accuracy or coverage guarantee. No external service receives the local input.
 
 ## Attribution
 
