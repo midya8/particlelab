@@ -1,4 +1,4 @@
-"""Scalar bootstrap filtering with explicit finite-particle histories."""
+"""Scalar bootstrap/conditional filtering with explicit particle histories."""
 import math
 import random
 
