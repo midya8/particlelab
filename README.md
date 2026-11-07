@@ -33,7 +33,7 @@ Every model command reads exactly these six JSON fields:
 }
 ```
 
-`filter` also accepts `--observation square`, meaning h(x)=x² rather than x. `kalman` is only the linear identity-observation reference. `square-reference` provides restricted static symmetry/mode checks from `examples/square.json`; it rejects a!=1, process_std!=0 or initial_mean!=0. This is not a dynamic nonlinear tracking reference. `demo` needs no file. Output is JSON; invalid inputs exit 2 with a prefixed stderr error and no traceback. Python APIs are `filter_particles`, `kalman` and `systematic_resample` from `particlelab`.
+`filter` also accepts `--observation square`, meaning h(x)=x² rather than x. `kalman` is only the linear identity-observation reference. `square-reference` provides restricted static symmetry/mode checks from `examples/square.json`; it rejects a!=1, process_std!=0 or initial_mean!=0. This is not a dynamic nonlinear tracking reference. `demo` needs no file. Output is JSON; invalid inputs exit 2 with a prefixed stderr error and no traceback. Python APIs are `filter_particles`, `kalman` and `systematic_resample` from `particlelab`. `genealogy_smoother` and `rts` are separate retrospective APIs.
 
 ## Explicit model and timing
 
@@ -44,7 +44,7 @@ Every model command reads exactly these six JSON fields:
 - Normalize in log space. Retain finite normalized log weights across skipped resampling even if their stored probabilities underflow to zero. A later observation can revive such a particle's relative mass.
 - If weight `ESS < N*ess_fraction`, resample with one systematic offset and reset carried weights to 1/N. The inequality is strict; fraction 0 disables resampling. Finite rounding can matter near the threshold.
 
-This is filtering p(xₜ | y₀:ₜ), not smoothing p(xₜ | y₀:T). Nothing learns parameters, proposes guided particles, rejuvenates states or corrects an observation model.
+The base `filter` command targets p(xₜ | y₀:ₜ), not smoothing p(xₜ | y₀:T). The separate `smooth` command reconstructs terminal-weighted retained paths; `rts` supplies an exact scalar linear-Gaussian smoothing reference. Neither learns parameters, proposes guided particles, rejuvenates states or corrects an observation model.
 
 ## Inspect the output, not one score
 
@@ -91,16 +91,35 @@ python examples/square_audit.py > /tmp/square-audit.json
 python examples/render_square.py /tmp/square-audit.json --check
 ```
 
+## Current diversity does not restore early paths
+
+`smooth` reconstructs every retained ancestral trajectory and applies terminal **filtered** weights, deliberately ignoring final resampling. `rts` is the separate exact scalar linear-Gaussian fixed-interval reference. Earlier values use future observations: neither command is an online forecast.
+
+A fixed 64-step dynamic linear fixture has 32 distinct terminal states, yet all retained paths pass through one initial particle. Its time-0 genealogy variance is 0 versus exact smoothed variance .009521314. Process noise restores current diversity, not discarded past paths. This is a finite development counterexample, not a policy ranking or a backward-simulation algorithm.
+
+![Retained-path smoothing and early uncertainty loss](assets/smoothing-audit.svg)
+
+The inherited linear example retains all sixteen seeds 0..15. The mean of per-seed smoothing mean RMSEs versus RTS is .0299202464 and the variance RMSE average is .0137440904. Filtering and smoothing have different targets; these errors are descriptive, not a claim that one improves the other. [Index/weight derivation, exact-reference checks, complete fixed results and limits](SMOOTHING.md).
+
+```sh
+python -m particlelab smooth examples/sequence.json --particles 512 --seed 0
+python -m particlelab rts examples/sequence.json
+python examples/smoothing_audit.py > /tmp/smoothing-audit.json
+python examples/render_smoothing.py /tmp/smoothing-audit.json --check
+```
+
 ## Validation and bounds
 
-**54 tests** cover one-step hand weights/moments/evidence, no-resampling evidence against full products over the initial sample, recovery of relative log mass after probability underflow, exact resampling boundary/zero-bin/offspring audits, RNG isolation, parent/root mappings, state-diversity versus ancestry, closed-form Gaussian/static-sequence references, extreme precision, strict CLI payloads, both success/failure demo checks and all plotted coordinates/values/SD polygon vertices. Static-square symmetry/modes, direct log-joint density ratios, sign-mass traces and the second SVG are also checked. The expected-offspring test integrates a fixed rational-weight fixture over a systematic-offset grid; it is not a proof for all floats. CI runs Python 3.10..3.13 plus the demo and byte-identical SVG check.
+**74 tests** cover one-step hand weights/moments/evidence, no-resampling evidence against full products over the initial sample, recovery of relative log mass after probability underflow, exact resampling boundary/zero-bin/offspring audits, RNG isolation, parent/root mappings, state-diversity versus ancestry, closed-form Gaussian/static-sequence references, extreme precision, strict CLI payloads, both success/failure demo checks and all plotted coordinates/values/SD polygon vertices. Static-square symmetry/modes, direct log-joint density ratios, sign-mass traces, dense joint-Gaussian smoothing references, forward path-copy equivalence and all three SVGs are also checked. The expected-offspring test integrates a fixed rational-weight fixture over a systematic-offset grid; it is not a proof for all floats. CI runs Python 3.10..3.13 plus the demo and byte-identical SVG check.
 
-Inputs: 1..80 finite observations in [-1e4,1e4]; a in [-1,1]; process std in [0,100]; observation/initial std in [1e-4,100]; initial mean in [-1e4,1e4]. Particles: integer 1..4096; `N*T <= 65536`. Seed: integer `0..2**32-1`. ESS fraction: [0,1]. Booleans are rejected as numbers. Full history uses `O(T*N)` time/output/memory, including `O(N)` systematic resampling, plus `O(T)` for the Kalman reference. The demo runs sixteen additional particle filters. All quantities use floating point and a finite local RNG. Tiny weights can underflow; finite logs survive only before resampling. Random draws are reproducible in the tested environment, not a cross-language bitstream contract.
+Inputs: 1..80 finite observations in [-1e4,1e4]; a in [-1,1]; process std in [0,100]; observation/initial std in [1e-4,100]; initial mean in [-1e4,1e4]. Particles: integer 1..4096; `N*T <= 65536`. Seed: integer `0..2**32-1`. ESS fraction: [0,1]. Booleans are rejected as numbers. Full history uses `O(T*N)` time/output/memory, including `O(N)` systematic resampling, plus `O(T)` for the Kalman/RTS references. Retrospective reconstruction adds `O(T*N)` time/memory and returned full trajectories. The demo runs sixteen additional particle filters. All quantities use floating point and a finite local RNG. Tiny weights can underflow; finite logs survive only before resampling. Random draws are reproducible in the tested environment, not a cross-language bitstream contract.
 
-The square branch has an analytic static symmetry/mode reference and selected support-loss fixtures, not a dynamic nonlinear tracking benchmark. There is no smoothing, parameter learning, high-dimensional proposal, robustness claim, convergence certificate, anomaly test, real-world accuracy or coverage guarantee. No external service receives the local input.
+The square branch has an analytic static symmetry/mode reference and selected support-loss fixtures, not a dynamic nonlinear tracking benchmark. There is no backward-simulation smoothing, parameter learning, high-dimensional proposal, robustness claim, convergence certificate, anomaly test, real-world accuracy or coverage guarantee. No external service receives the local input.
 
 ## Attribution
 
 Independent implementation inspired by Gordon, Salmond and Smith, **"Novel approach to nonlinear/non-Gaussian Bayesian state estimation" (1993)**, especially Section 3's transition propagation, likelihood weighting and bootstrap resampling. [Primary paper](https://people.bordeaux.inria.fr/pierre.delmoral/gordon-salmond-smith-1993.pdf). The paper also discusses loss of distinct samples. This project uses systematic/adaptive ESS resampling, scalar linear/square observation models and its own synthetic fixtures; it does **not** reproduce the paper's bearings-only experiments, roughening, prior editing or performance comparisons. No code or paper figures were copied.
+
+Standard retained-history SIR smoothing and scalar RTS references are independently implemented; [Särkkä and Svensson (2023), sections 12.2/15.1](https://users.aalto.fi/~ssarkka/pub/bfs_book_2023_online.pdf). No source text, code or figures copied.
 
 MIT license.
