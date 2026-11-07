@@ -13,13 +13,13 @@ Python: `filter_particles(data, proposal='conditional', **settings)`. The six-fi
 
 ## One conditional Gaussian per ancestor
 
-Write Q=q², R=r², with supplied fixed model parameters. For t>0 and a carried ancestor z, the prior transition is Normal(a*z,Q) and the likelihood is Normal(y;x,R). The identity
+Write Q=q², R=r², with supplied fixed model parameters. For t>0 and a carried ancestor z, the prior transition is Normal(`a*z`,Q) and the likelihood is Normal(y;x,R). The identity
 
 ```text
 p(x|z) * p(y|x) / p(x|z,y) = p(y|z)
 ```
 
-makes the importance correction independent of the newly drawn state when z is fixed. With m=a*z:
+makes the importance correction independent of the newly drawn state when z is fixed. With `m=a*z`:
 
 ```text
 S = Q + R
@@ -30,11 +30,11 @@ log_predictive = -.5 * [log(2*pi*S) + (y-m)^2/S]
 unnormalized_log_weight = incoming_log_weight + log_predictive
 ```
 
-The Joseph-form variance equals Q*R/(Q+R) algebraically and avoids subtracting nearly equal numbers. Draw x from this proposal, then normalize the predictive importance weights. **Do not multiply by the observation likelihood again.** The tests verify the Gaussian density ratio independently at several state values.
+The Joseph-form variance equals `Q*R/(Q+R)` algebraically and avoids subtracting nearly equal numbers. Draw x from this proposal, then normalize the predictive importance weights. **Do not multiply by the observation likelihood again.** The tests verify the Gaussian density ratio independently at several state values.
 
 At t=0 there is no transition. Replace m,Q by the initial mean/variance, draw from the exact initial conditional, set all weights to 1/N and use the analytic initial predictive density as the evidence increment. Even one particle has this exact initial evidence in floating point, but one sampled state still has empirical variance zero and does not represent exact uncertainty.
 
-At Q=0, K=0 and the proposal is the deterministic state a*z. No later Gaussian draw or invented process noise is used. The predictive correction becomes the observation likelihood at a*z. This is a degenerate measure, not a positive-variance transition-density formula. Squared process std can also underflow to zero at extreme tiny positive inputs; floating-point output follows the resulting zero variance. This forward proposal accepts q=0; the separate `backward` sampler still rejects process std below 1e-4.
+At Q=0, K=0 and the proposal is the deterministic state `a*z`. No later Gaussian draw or invented process noise is used. The predictive correction becomes the observation likelihood at `a*z`. This is a degenerate measure, not a positive-variance transition-density formula. Squared process std can also underflow to zero at extreme tiny positive inputs; floating-point output follows the resulting zero variance. This forward proposal accepts q=0; the separate `backward` sampler still rejects process std below 1e-4.
 
 ## What "optimal" does and does not mean
 
@@ -73,7 +73,7 @@ For conditional weights, finite normalized log weights are calculated from peak-
 
 **114 tests** include independent precision-form conditional moments, transition-times-likelihood/proposal density identities, exact initial predictive evidence, a hand-worked two-step predictive-weight calculation, full no-resampling predictive products, q=0 draw counts and deterministic states, a=0 exact evidence at every step, probability-underflow revival, extreme inputs, parent/root maps, RNG/input isolation, CLI rejection of square observations and unchanged default output. Python smoother integration and all 64 new figure point values/coordinates, four polylines, complete metadata and byte-identical regeneration are checked. All previous demos and four SVGs remain unchanged. CI runs Python 3.10..3.13 plus the five reproducible figures.
 
-The same limits apply: T=1..80, N=1..4096, N*T<=65536; finite model parameters in the README's stated ranges. Time, full-history memory and output stay O(N*T), with three more per-particle arrays for this proposal. No higher-dimensional model, parameter fitting or nonlinear observation approximation is supplied. No external service receives the input.
+The same limits apply: T=1..80, N=1..4096, `N*T<=65536`; finite model parameters in the README's stated ranges. Time, full-history memory and output stay `O(N*T)`, with three more per-particle arrays for this proposal. No higher-dimensional model, parameter fitting or nonlinear observation approximation is supplied. No external service receives the input.
 
 ## Attribution
 
