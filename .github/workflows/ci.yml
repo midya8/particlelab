@@ -21,3 +21,5 @@ jobs:
           python-version: '3.11'
       - run: python -m particlelab demo > /tmp/particle-demo.json
       - run: python examples/render_demo.py /tmp/particle-demo.json --check
+      - run: python examples/square_audit.py > /tmp/square-audit.json
+      - run: python examples/render_square.py /tmp/square-audit.json --check
