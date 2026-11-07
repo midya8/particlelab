@@ -46,7 +46,7 @@ The particle filter now retains `filtered_sign_mass` and `carried_sign_mass` dic
 
 Twelve observations all equal to 4, observation std .3, initial std 2, with the restricted static model above. The exact posterior retains sign mass .5 and mean 0 at every prefix. Its final modes are **+/-1.9997656112654802**, and log density at the mean relative to either mode is **-1066.1667252604166**. The density ratio underflows if exponentiated, but the log remains finite. The correct posterior mean is in a density valley, not a typical state or a mode.
 
-| Final quantity | N8, resampling fraction1 | N8, no resampling | N4096, resampling fraction1 | Analytic reference |
+| Final quantity | N=8, resampling fraction 1 | N=8, no resampling | N=4096, resampling fraction 1 | Analytic reference |
 |---|---:|---:|---:|---:|
 | Filtered P(x>0) | 0 | .00000371680487 | .478163410122 | .5 |
 | Carried P(x>0) | 0 | .00000371680487 | .479248046875 | not applicable |
@@ -54,9 +54,9 @@ Twelve observations all equal to 4, observation std .3, initial std 2, with the 
 | Carried ESS | 8 | 1.00000743364 | 4096 | not applicable |
 | Initial labels carried | 1 | 8 | 154 | not applicable |
 
-All three runs use seed 0 and identical observations/parameters. During development, seed-0 budgets 8/16/32/64/512/4096 were inspected on repeated y=4; N8 and N4096 with a common twelve-observation horizon were retained, plus the N8 no-resampling comparison. The small-budget sign-loss example was selected after inspection. This is not a held-out budget ranking, a recommendation to use4096 particles or a comparison that isolates resampling as a general causal mechanism. Larger budgets change the finite initial sample and subsequent RNG stream. No process noise means resampling cannot regenerate lost sign support.
+All three runs use seed 0 and identical observations/parameters. During development, seed-0 budgets 8/16/32/64/512/4096 were inspected on repeated y=4; N=8 and N=4096 with a common twelve-observation horizon were retained, plus the N=8 no-resampling comparison. The small-budget sign-loss example was selected after inspection. This is not a held-out budget ranking, a recommendation to use 4096 particles or a comparison that isolates resampling as a general causal mechanism. Larger budgets change the finite initial sample and subsequent RNG stream. No process noise means resampling cannot regenerate lost sign support.
 
-The N8 no-resampling run retains a tiny nonzero positive-sign mass, yet is also far from the analytic .5. The selected larger run retains both signs but is still a random approximation, not an exact or calibrated posterior. A full post-resampling weight ESS does not mean either sign mass or mean is right.
+The N=8 no-resampling run retains a tiny nonzero positive-sign mass, yet is also far from the analytic .5. The selected larger run retains both signs but is still a random approximation, not an exact or calibrated posterior. A full post-resampling weight ESS does not mean either sign mass or mean is right.
 
 ![Analytic density valley and finite-particle sign loss](assets/square-symmetry.svg)
 
@@ -64,6 +64,6 @@ Panel A evaluates the analytic quartic log-density ratio at 101 display states i
 
 ## Validation and limits
 
-Sixteen new tests bring the suite to54. Independent direct log-joint evaluation checks density ratios; derivatives and neighbor values check modes; positive/negative state pairs check evenness; unimodal and flat-threshold cases, finite underflow logs and extreme inputs are covered. Filtered/carried sign masses are checked directly from trace particles/weights, including zero atoms. CLI fixed-model restrictions/booleans, deterministic audit reproduction, every plotted sign coordinate, all101 analytic curve coordinates and exact marker geometry are checked.
+Sixteen new tests bring the suite to 54. Independent direct log-joint evaluation checks density ratios; derivatives and neighbor values check modes; positive/negative state pairs check evenness; unimodal and flat-threshold cases, finite underflow logs and extreme inputs are covered. Filtered/carried sign masses are checked directly from trace particles/weights, including zero atoms. CLI fixed-model restrictions/booleans, deterministic audit reproduction, every plotted sign coordinate, all 101 analytic curve coordinates and exact marker geometry are checked.
 
 This validates a restricted static analytical case and finite selected particle runs. It does not establish dynamic nonlinear tracking quality, posterior variance/evidence correctness for square observations, smoothing, robustness, convergence, calibrated coverage or real-data performance. The figure's mean-at-a-valley observation does not make the mean an incorrect expectation. It shows why a correct scalar expectation can be an unrepresentative state summary.
