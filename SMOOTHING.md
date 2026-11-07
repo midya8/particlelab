@@ -38,7 +38,7 @@ With no resampling every lineage map is the identity, but earlier states still r
 
 ## Linear RTS reference
 
-For filtered mean m and variance P at time t, let the next predictive mean be a*m and variance V = a²*P + q². The scalar backward gain is G = P*a/V when V>0. Starting from the final filtered marginal, use:
+For filtered mean m and variance P at time t, let the next predictive mean be `a*m` and variance `V = a²*P + q²`. The scalar backward gain is `G = P*a/V` when V>0. Starting from the final filtered marginal, use:
 
 ```text
 smoothed_mean_t = filtered_mean_t + G * (smoothed_mean_next - a*filtered_mean_t)
