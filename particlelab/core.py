@@ -64,25 +64,61 @@ def sign_mass(states,weights):
             'positive_probability':math.fsum(w for x,w in zip(states,weights) if x>0)}
 
 
+def conditional_gaussian(mean, variance, value, noise_variance):
+    """Internal scalar conditioning primitive; caller validates the model."""
+    predictive = variance + noise_variance
+    gain = variance / predictive
+    conditioned_mean = mean + gain * (value - mean)
+    # Joseph form, including variance=0 without a fake density or random move.
+    conditioned_variance = (1-gain)**2 * variance + gain*gain*noise_variance
+    log_predictive = -.5 * (math.log(2*math.pi*predictive) + (value-mean)**2/predictive)
+    return conditioned_mean, conditioned_variance, log_predictive
+
+
 def filter_particles(data,particles=256,seed=0,a=.9,process_std=.4,observation_std=.5,
-                     initial_mean=0.,initial_std=2.,ess_fraction=.5,observation='linear'):
+                     initial_mean=0.,initial_std=2.,ess_fraction=.5,observation='linear',proposal='bootstrap'):
     y,a,q,r,mu,tau=model(data,a,process_std,observation_std,initial_mean,initial_std)
     count=integer(particles,'particles',1,4096);seed=integer(seed,'seed',0,2**32-1)
     if count*len(y)>65536:raise ValueError('particles times observations must not exceed 65536')
     threshold=real(ess_fraction,'ess_fraction',0.,1.)
     if observation not in ('linear','square'):raise ValueError('observation must be linear or square')
-    rng=random.Random(seed);states=[rng.gauss(mu,tau) for _ in range(count)];weights=[1/count]*count
+    if proposal not in ('bootstrap','conditional'):raise ValueError('proposal must be bootstrap or conditional')
+    if proposal=='conditional' and observation!='linear':raise ValueError('conditional proposal requires linear observations')
+    guided=proposal=='conditional'
+    rng=random.Random(seed)
+    if guided:
+        first_mean,first_variance,first_predictive=conditional_gaussian(mu,tau*tau,y[0],r*r)
+        states=[rng.gauss(first_mean,math.sqrt(first_variance)) for _ in range(count)]
+    else:states=[rng.gauss(mu,tau) for _ in range(count)]
+    weights=[1/count]*count
     roots=list(range(count));history=[];log_evidence=0.
     for t,value in enumerate(y):
-        if t:states=[a*x+(rng.gauss(0.,q) if q else 0.) for x in states]
+        if guided:
+            if t:
+                parameters=[conditional_gaussian(a*x,q*q,value,r*r) for x in states]
+                states=[rng.gauss(m,math.sqrt(v)) if v else m for m,v,_ in parameters]
+            else:parameters=[(first_mean,first_variance,first_predictive)]*count
+        elif t:states=[a*x+(rng.gauss(0.,q) if q else 0.) for x in states]
         prior_weights=weights[:]
         # Keep finite log weights across skipped resampling, even if stored
         # normalized probabilities underflow. See log_weights below.
         if t==0 or history[-1]['resampled']:prior_logs=[-math.log(count)]*count
         else:prior_logs=log_weights
-        likelihood=[-.5*(math.log(2*math.pi*r*r)+(value-(x if observation=='linear' else x*x))**2/(r*r)) for x in states]
-        increment,weights=normalize([w+l for w,l in zip(prior_logs,likelihood)])
-        log_weights=[w+l-increment for w,l in zip(prior_logs,likelihood)]
+        if guided:
+            likelihood=[p[2] for p in parameters]
+            if t==0:
+                # Exact prior predictive evidence and equal initial weights.
+                increment=first_predictive;weights=[1/count]*count
+                log_weights=[-math.log(count)]*count
+            else:
+                raw=[w+l for w,l in zip(prior_logs,likelihood)]
+                increment,weights=normalize(raw)
+                peak=max(raw);log_total=math.log(math.fsum(math.exp(v-peak) for v in raw))
+                log_weights=[(v-peak)-log_total for v in raw]
+        else:
+            likelihood=[-.5*(math.log(2*math.pi*r*r)+(value-(x if observation=='linear' else x*x))**2/(r*r)) for x in states]
+            increment,weights=normalize([w+l for w,l in zip(prior_logs,likelihood)])
+            log_weights=[w+l-increment for w,l in zip(prior_logs,likelihood)]
         log_evidence+=increment;mean,variance=moments(states,weights);ess=1/math.fsum(w*w for w in weights)
         resampled=ess<count*threshold
         parents=systematic_resample(weights,rng.random()) if resampled else list(range(count))
@@ -97,10 +133,19 @@ def filter_particles(data,particles=256,seed=0,a=.9,process_std=.4,observation_s
                         'carried_sign_mass':sign_mass(states,weights),'carried_mean':post_mean,'carried_variance':post_variance,'ess_after_resampling':1/math.fsum(w*w for w in weights),
                         'unique_initial_ancestors':len(set(roots)),'distinct_carried_states':len(set(states)),
                         'log_evidence_increment':increment,'cumulative_log_evidence':log_evidence})
-    return {'settings':{'particles':count,'seed':seed,'a':a,'process_std':q,'observation_std':r,'initial_mean':mu,
+        if guided:
+            history[-1].update(proposal_means=[p[0] for p in parameters],
+                               proposal_variances=[p[1] for p in parameters],
+                               log_predictive_likelihoods=likelihood[:])
+    result = {'settings':{'particles':count,'seed':seed,'a':a,'process_std':q,'observation_std':r,'initial_mean':mu,
                         'initial_std':tau,'ess_fraction':threshold,'observation':observation},'data':y,
             'history':history,'log_evidence_estimate':log_evidence,
             'semantics':'scalar bootstrap particle approximation; x0 from initial Normal, xt=a*x(t-1)+independent Normal(0,q²) for t>0; y given x is Normal(h(x),r²), h linear identity or square; transition proposal, optional systematic resampling when ESS<N*fraction (strict); summaries before resampling, carried summaries after; ancestry counts trace initial particle labels, not distinct present values; sign masses are weighted latent-state probabilities below/at/above0 before and after resampling, not event confidence; ESS measures weight concentration, not convergence, calibration or accuracy; finite local RNG and floating point; likelihood estimate random, log estimate not unbiased; no smoothing, parameter fitting or real-data guarantee'}
+    if guided:
+        result['settings']['proposal']='conditional'
+        result['semantics']='scalar linear observation-conditioned particle filter; x0 sampled from exact p(x0|y0), equal weights and exact initial predictive evidence; t>0 proposal p(xt|x(t-1),yt), weights multiply by Normal(yt|a*x(t-1),q²+r²); no lookahead ancestor selection or auxiliary resampling; q=0 gives a deterministic move without random noise; supplied fixed model, floating point and local RNG; history summaries before systematic resampling; still a finite ancestral particle approximation, not Kalman filtering or independent model-posterior draws; conditional weight variance given an ancestor is zero mathematically, but ancestor weights can concentrate; no smoothing, calibration, accuracy, convergence or unbiased log-evidence guarantee'
+    return result
+
 
 
 def kalman(data,a=.9,process_std=.4,observation_std=.5,initial_mean=0.,initial_std=2.):
