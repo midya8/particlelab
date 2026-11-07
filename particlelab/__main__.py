@@ -21,6 +21,8 @@ def main():
             command.add_argument('--seed',type=int,default=0,help='local seed0..2**32-1 (default:0)')
             command.add_argument('--ess-fraction',type=float,default=.5,help='resample if ESS<N*fraction,0..1 (default:.5);0 disables')
             command.add_argument('--observation',choices=['linear','square'],default='linear',help='h(x)=x or x²; Kalman applies only to linear')
+        if name=='filter':
+            command.add_argument('--proposal',choices=['bootstrap','conditional'],default='bootstrap',help='transition bootstrap or linear-only observation-conditioned proposal')
         if name=='backward':
             command.add_argument('--draws',type=int,default=256,help='1..1024, particles*T*draws<=2097152')
             command.add_argument('--draw-seed',type=int,default=0,help='separate local backward-draw seed0..2**32-1')
@@ -38,6 +40,7 @@ def main():
                 result=static_square_reference(payload['data'],observation_std=payload['observation_std'],initial_std=payload['initial_std'])
             elif args.command in ('kalman','rts'):result=(kalman if args.command=='kalman' else rts)(**payload)
             elif args.command=='backward':result=backward_smoother(**payload,particles=args.particles,seed=args.seed,ess_fraction=args.ess_fraction,observation=args.observation,draws=args.draws,draw_seed=args.draw_seed)
+            elif args.command=='filter':result=filter_particles(**payload,particles=args.particles,seed=args.seed,ess_fraction=args.ess_fraction,observation=args.observation,proposal=args.proposal)
             else:result=(filter_particles if args.command=='filter' else genealogy_smoother)(**payload,particles=args.particles,seed=args.seed,ess_fraction=args.ess_fraction,observation=args.observation)
         print(json.dumps(result,indent=2,allow_nan=False))
     except (ValueError,TypeError,OSError,OverflowError) as error:parser.exit(2,f'particlelab: {error}\n')
