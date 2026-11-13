@@ -1,6 +1,12 @@
 # ParticleLab
 
-**Full weight ESS does not mean recovered uncertainty.** A bootstrap particle filter from scratch, with log-domain weights, systematic resampling, complete weighted/carried particle histories, initial-ancestry audits and an exact scalar Kalman reference. Dependency-free Python 3.10+; no paid API, GPU or data download.
+ParticleLab estimates hidden scalar states from noisy observations with a
+bootstrap particle filter. It keeps the full weighted and resampled histories
+so you can compare weight concentration, state diversity and initial ancestry.
+An exact Kalman reference shows where finite particles miss uncertainty.
+
+The package uses Python 3.10+ with no runtime dependencies, paid API, GPU or
+data download.
 
 ![Particle filtering and finite-support failure](assets/particle-audit.svg)
 
@@ -35,7 +41,7 @@ Every model command reads exactly these six JSON fields:
 
 `filter` also accepts `--observation square`, meaning h(x)=x² rather than x. `kalman` is only the linear identity-observation reference. `square-reference` provides restricted static symmetry/mode checks from `examples/square.json`; it rejects a!=1, process_std!=0 or initial_mean!=0. This is not a dynamic nonlinear tracking reference. `demo` needs no file. Output is JSON; invalid inputs exit 2 with a prefixed stderr error and no traceback. Python APIs are `filter_particles`, `kalman` and `systematic_resample` from `particlelab`. `genealogy_smoother` and `rts` are separate retrospective APIs.
 
-## Explicit model and timing
+## Model and timing
 
 - Initial x₀ ~ Normal(initial_mean, initial_std²). The first observation updates this distribution directly: **there is no initial transition**.
 - For t>0, `xₜ = a*xₜ₋₁ + Normal(0, process_std²)`, with independent process noise. Process std may be zero.
@@ -46,13 +52,26 @@ Every model command reads exactly these six JSON fields:
 
 The `filter` command targets p(xₜ | y₀:ₜ), not smoothing p(xₜ | y₀:T). The separate `smooth` command reconstructs terminal-weighted retained paths; `rts` supplies an exact scalar linear-Gaussian smoothing reference. Neither learns parameters, rejuvenates states or corrects an observation model. The separate linear conditional proposal below guides new particles using the current observation.
 
-## Inspect the output, not one score
+## Output histories
 
 Each time step retains filtered particles, probability/log weights, incoming probability/log weights, initial-root labels, filtered mean/variance and ESS, the resampling decision and parent indices, carried particles/weights/root labels, carried moments/ESS, unique initial ancestors, distinct carried state values and evidence increments. Filtered summaries are **before** resampling; carried summaries are **after**. Resampling can change moments by sampling noise. Ancestry counts track labels, not the number of currently distinct state values. Positive process noise can create distinct values without recovering lost initial ancestors.
 
 Systematic resampling uses points `(j+offset)/N`, offset uniform in [0,1). CDF bins are right-open: a point exactly on a boundary skips that bin, including zero-mass bins. Particles are dependent after resampling; they are not independent posterior draws. Float CDF roundoff is guarded at the tail, but the implementation is not exact rational arithmetic.
 
 The accumulated evidence estimate is random. Its log is not an unbiased log-evidence estimate. Log-evidence errors here are finite-run diagnostics, not a likelihood-estimator theorem or a Bayes-factor reliability claim. `ESS = 1/sum(w²)` measures weight concentration only. Neither ESS nor ancestry count proves convergence, accuracy or calibrated uncertainty.
+
+## Filtering and retrospective paths
+
+- `filter` estimates the current state using observations so far; `kalman` is
+  the exact linear-Gaussian reference.
+- `smooth` follows retained genealogies with terminal weights; `rts` is the
+  exact linear-Gaussian retrospective reference.
+- `backward` samples paths between retained filtering states rather than
+  following recorded parent links. It cannot invent missing state values.
+- `filter --proposal conditional` uses the current observation to propose
+  linear-model particles. The default remains bootstrap.
+
+The sections below give the fixed examples and limits for each calculation.
 
 ## Reproducible development examples
 
