@@ -1,4 +1,4 @@
-# Condition on the observation before drawing particles
+# Observation-conditioned proposals
 
 `filter --proposal conditional` adds an observation-conditioned Gaussian proposal for the scalar **linear identity-observation model only**. The bootstrap proposal remains the default, with unchanged existing demo output. This is a different proposal, not a learned transition, model change, auxiliary ancestor-selection filter or repair of existing retained states.
 
@@ -30,7 +30,7 @@ log_predictive = -.5 * [log(2*pi*S) + (y-m)^2/S]
 unnormalized_log_weight = incoming_log_weight + log_predictive
 ```
 
-The Joseph-form variance equals `Q*R/(Q+R)` algebraically and avoids subtracting nearly equal numbers. Draw x from this proposal, then normalize the predictive importance weights. **Do not multiply by the observation likelihood again.** The tests verify the Gaussian density ratio independently at several state values.
+The Joseph-form variance equals `Q*R/(Q+R)` algebraically and avoids subtracting nearly equal numbers. Draw x from this proposal, then normalize the predictive importance weights. The predictive correction already accounts for the observation; multiplying by its likelihood again would count it twice. The tests verify the Gaussian density ratio independently at several state values.
 
 At t=0 there is no transition. Replace m,Q by the initial mean/variance, draw from the exact initial conditional, set all weights to 1/N and use the analytic initial predictive density as the evidence increment. Even one particle has this exact initial evidence in floating point, but one sampled state still has empirical variance zero and does not represent exact uncertainty.
 
@@ -59,7 +59,7 @@ The following are means of per-run metrics, not pooled errors or confidence inte
 | .01 / bootstrap | .0416192831 | .0002889767 | -111.5785506 | 1 |
 | .01 / conditional | .0017855306 | .0000231947 | +.0029966538 | 31.7938586 |
 
-**There is no uniform improvement:** at inherited std .5, conditional variance RMSE is worse (.037895 versus .035944), while mean RMSE is similar. The .01 example has much smaller conditional mean and variance errors on these runs, but neither result is a general method ranking or calibration evidence.
+The results do not improve uniformly: at inherited std .5, conditional variance RMSE is worse (.037895 versus .035944), while mean RMSE is similar. The .01 example has much smaller conditional mean and variance errors on these runs, but neither result is a general method ranking or calibration evidence.
 
 Average resampling counts are 4.5/1.0 (bootstrap/conditional) at std .5 and 12/0 at std .01. Average terminal initial-label counts are 5.875/18.5625 and 1/32 respectively. These are raw retained ancestor-label counts, not a posterior accuracy or smoothing guarantee. Full carried ESS is not used as a success condition.
 
